@@ -35,7 +35,7 @@
 			},
 			{
 				"name": "storage.modifier.quickbase",
-				"match": "\\b(text|number)\\b"
+				"match": "\\b(bool|text|number|date|datetime|duration|timeofday|workdate|user)\\b"
 			}]
 		},
 		"operator": {
