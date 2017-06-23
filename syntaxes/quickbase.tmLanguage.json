@@ -19,9 +19,18 @@
 		},
 		{
 			"include": "#storage"
+		},
+		{
+			"include": "#comment"
 		}
 	],
 	"repository": {
+		"comment": {
+			"patterns":[{
+				"name": "comment.line",
+				"match": "\\/{2}.*"
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.quickbase",
@@ -41,7 +50,7 @@
 		"operator": {
 			"patterns": [{
 				"name": "keyword.operator.quickbase",
-				"match": "(\\b(and|or|not)\\b)|(\\+|-|%|#|\\*|\\/|\\^|==?|~=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.))"
+				"match": "(\\+|-|\\*|(?<!\/)\/{1}(?!\/)(?!\/))"
 			}]
 		},
 		"variable": {
