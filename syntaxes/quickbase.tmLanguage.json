@@ -1,0 +1,80 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Quick Base",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operator"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#storage"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.quickbase",
+				"match": "\\b(and|or|not)\\b|&"
+			}]
+		},
+		"storage": {
+			"patterns": [{
+				"name": "storage.type.quickbase",
+				"match": "\\bvar\\b"
+			},
+			{
+				"name": "storage.modifier.quickbase",
+				"match": "\\b(text|number)\\b"
+			}]
+		},
+		"operator": {
+			"patterns": [{
+				"name": "keyword.operator.quickbase",
+				"match": "(\\b(and|or|not)\\b)|(\\+|-|%|#|\\*|\\/|\\^|==?|~=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.))"
+			}]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "variable.language.quickbase",
+				"match": "\\[[^\\[]+]"
+			},
+			{
+				"name": "variable.other.quickbase",
+				"match": "\\w([\\w_-]+)(?=\\s*(=)\\s*)"
+			},
+			{
+				"name": "variable.other.quickbase",
+				"match": "(\\$[\\w_-]+)"
+			}]
+		},
+		"support": {
+			"patterns": [{
+				"name": "support.function.quickbase",
+				"match": "\\b(Abs|AdjustMonth|AdjustYear|Average|Begins|Case|Ceil|Contains|Count|Date|Day|DayOfWeek|DayOfYear|Days|Dbid|Ends|Exp|FirstDayOfMonth|FirstDayOfPeriod|FirstDayOfWeek|FirstDayOfYear|Floor|Frac|Hour|Hours|If|Includes|Int|IsLeapDay|IsLeapYear|IsNull|IsUserEmail|IsWeekday|LastDayOfMonth|LastDayOfPeriod|LastDayOfWeek|LastDayOfYear|Left|Length|List|Ln|Log|Lower|MSecond|MSeconds|Max|Mid|Min|Minute|Minutes|Mod|Month|NextDayOfWeek|NotLeft|NotRight|Now|Nz|PV|Part|PrevDayOfWeek|Rem|Right|Round|Second|Seconds|Sqrt|Sum|ToBoolean|ToDate|ToDays|ToFormattedText|ToHours|ToMSeconds|ToMinutes|ToNumber|ToSeconds|ToText|ToTimeOfDay|ToTimestamp|ToUser|ToUserList|ToWeekdayN|ToWeekdayP|ToWeeks|ToWorkDate|Today|Trim|URLEncode|URLRoot|Upper|User|UserListToNames|UserToEmail|UserToName|WeekdayAdd|WeekdaySub|Weeks|WorkdayAdd|Year)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.quickbase",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.quickbase",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.quickbase"
+}

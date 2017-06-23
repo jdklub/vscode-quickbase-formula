@@ -1,0 +1,26 @@
+{
+    "name": "quick-base-formula",
+    "displayName": "Quick Base Formula",
+    "description": "Syntax highlighting for Quick Base Formula Fields",
+    "version": "0.0.1",
+    "publisher": "klubnik",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "quickbase",
+            "aliases": ["Quick Base", "quickbase"],
+            "extensions": [".txt",".quickbase",".qb",".formula"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "quickbase",
+            "scopeName": "source.quickbase",
+            "path": "./syntaxes/quickbase.tmLanguage.json"
+        }]
+    }
+}
