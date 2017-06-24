@@ -1,7 +1,7 @@
 {
     "name": "quick-base-formula",
     "displayName": "Quick Base Formula",
-    "description": "Syntax highlighting for Quick Base Formula Fields",
+    "description": "Syntax Highlighting for Quick Base Formula Fields",
     "version": "0.0.1",
     "publisher": "klubnik",
     "engines": {
