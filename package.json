@@ -14,7 +14,7 @@
         "languages": [{
             "id": "quickbase",
             "aliases": ["Quick Base", "quickbase"],
-            "extensions": [".txt",".quickbase",".qb",".formula"],
+            "extensions": [".quickbase"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
