@@ -2,9 +2,11 @@
 
 Highlights database fields, variables, operators, and built in functions.
 
+![screenshot](./images/screenshot.png)
+
 ## Requirements
 
-Files must has a .quickbase extension
+Files must have a .quickbase extension
 
 ## Known Issues
 

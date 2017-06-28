@@ -1,15 +1,17 @@
 {
-    "name": "quick-base-formula",
-    "displayName": "Quick Base Formula",
-    "description": "Syntax Highlighting for Quick Base Formula Fields",
+    "name": "quick-base-formula-syntax",
+    "displayName": "Quick Base Formula Syntax Highlighter",
+    "description": "Syntax Highlighting for Quick Base Formulas",
     "version": "0.0.1",
     "publisher": "klubnik",
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.13.0"
     },
     "categories": [
-        "Languages"
+        "Languages", "QuickBase", "Quick Base"
     ],
+    "license": "SEE LICENSE IN LICENSE.txt",
     "contributes": {
         "languages": [{
             "id": "quickbase",
