@@ -2,7 +2,7 @@
 
 Highlights database fields, variables, operators, and built in functions.
 
-![screenshot](./images/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/jdklub/vscode-quickbase-formula/master/images/screenshot.png)
 
 ## Requirements
 
