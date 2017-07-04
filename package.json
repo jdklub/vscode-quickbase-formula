@@ -5,6 +5,7 @@
     "version": "0.0.1",
     "publisher": "klubnik",
     "icon": "images/icon.png",
+    "repository": "https://github.com/jdklub/vscode-quickbase-formula",
     "engines": {
         "vscode": "^1.13.0"
     },
