@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Quick Base Formula",
+	"name": "Quickbase Formula",
 	"patterns": [
 		{
 			"include": "#keywords"
