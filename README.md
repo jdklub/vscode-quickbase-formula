@@ -1,4 +1,4 @@
-# Syntax Highlighter for Quick Base Formulas
+# Syntax Highlighter for Quickbase Formulas
 
 Highlights database fields, variables, operators, and built in functions.
 
