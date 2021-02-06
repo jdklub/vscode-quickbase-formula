@@ -1,0 +1,1514 @@
+{
+    "Abs (Duration d)": {
+        "prefix": [
+            "Abs"
+        ],
+        "body": [
+            "Abs($1)"
+        ],
+        "description": "Returns the absolute value of d."
+    },
+    "Abs (Number n)": {
+        "prefix": [
+            "Abs"
+        ],
+        "body": [
+            "Abs($1)"
+        ],
+        "description": "Returns the absolute value of the Number n."
+    },
+    "AdjustMonth (Date d, Number m)": {
+        "prefix": [
+            "AdjustMonth"
+        ],
+        "body": [
+            "AdjustMonth($1, $2)"
+        ],
+        "description": "Returns the date which is m months after the given date d, with the same day number. If the day doesn't exist in that month, the last day of that month is returned."
+    },
+    "AdjustYear (Date d, Number y)": {
+        "prefix": [
+            "AdjustYear"
+        ],
+        "body": [
+            "AdjustYear($1, $2)"
+        ],
+        "description": "Returns the date which is y years after the given date d, with the same month and day. If the day doesn't exist in that month, the last day of that month is returned."
+    },
+    "AppID ()": {
+        "prefix": [
+            "AppID"
+        ],
+        "body": [
+            "AppID()"
+        ],
+        "description": "Returns a text value containing the database ID of the app."
+    },
+    "Average (Date d, ...)": {
+        "prefix": [
+            "Average"
+        ],
+        "body": [
+            "Average($1)"
+        ],
+        "description": "Returns the average of all the arguments (except any null values)."
+    },
+    "Average (Date/Time t, ...)": {
+        "prefix": [
+            "Average"
+        ],
+        "body": [
+            "Average($1)"
+        ],
+        "description": "Returns the average of all the arguments (except any null values)."
+    },
+    "Average (Duration d, ...)": {
+        "prefix": [
+            "Average"
+        ],
+        "body": [
+            "Average($1)"
+        ],
+        "description": "Returns the average of all the arguments (except any null values)."
+    },
+    "Average (Number n, ...)": {
+        "prefix": [
+            "Average"
+        ],
+        "body": [
+            "Average($1)"
+        ],
+        "description": "Returns the average of all the arguments (except any null values)."
+    },
+    "Average (TimeOfDay t, ...)": {
+        "prefix": [
+            "Average"
+        ],
+        "body": [
+            "Average($1)"
+        ],
+        "description": "Returns the average of all the arguments (except any null values)."
+    },
+    "Base64Decode (Text t)": {
+        "prefix": [
+            "Base64Decode"
+        ],
+        "body": [
+            "Base64Decode($1)"
+        ],
+        "description": "Decodes text using base64 encoding."
+    },
+    "Base64Encode (Text t)": {
+        "prefix": [
+            "Base64Encode"
+        ],
+        "body": [
+            "Base64Encode($1)"
+        ],
+        "description": "Encodes text using base64 encoding."
+    },
+    "Begins (Text u, Text v)": {
+        "prefix": [
+            "Begins"
+        ],
+        "body": [
+            "Begins($1, $2)"
+        ],
+        "description": "Returns true if the text u begins with the text v, otherwise returns false."
+    },
+    "Bool variable": {
+        "prefix": [
+            "var Bool",
+            "Bool"
+        ],
+        "body": [
+            "var Bool $1 = $2;"
+        ],
+        "description": "Create a Bool variable"
+    },
+    "Case (\u003cany\u003e x, \u003cany\u003e val1, \u003cany\u003e result1, ..., \u003cany\u003e else-result)": {
+        "prefix": [
+            "Case"
+        ],
+        "body": [
+            "Case($1, $2, $3)"
+        ],
+        "description": "Case() is a variation of the If() function. If you want to test many conditions against a single field, use the Case() function instead of the If() function. \n\nQuickBase evaluates the value x and compares it to each of the values that follow (val1 and so on) sequentially. If the value X matches any value, QuickBase returns the corresponding result which lives behind the comma following the matched value. If value x is not equal to any of the values, QuickBase returns the else-result at the end of the formula.\n\nThe else-result is optional. If omitted, QuickBase assumes it's null (empty). \n\nThe value x may be of any data type, but all of the values must be of the same type as x."
+    },
+    "Ceil (Duration x, Duration y)": {
+        "prefix": [
+            "Ceil"
+        ],
+        "body": [
+            "Ceil($1, $2)"
+        ],
+        "description": "Returns the smallest multiple of the duration y which is greater than or equal to the duration x."
+    },
+    "Ceil (Number x)": {
+        "prefix": [
+            "Ceil"
+        ],
+        "body": [
+            "Ceil($1)"
+        ],
+        "description": "Returns the smallest integer greater than or equal to the number x."
+    },
+    "Ceil (Number x, Number y)": {
+        "prefix": [
+            "Ceil"
+        ],
+        "body": [
+            "Ceil($1, $2)"
+        ],
+        "description": "Returns the smallest multiple of y which is greater than or equal to x."
+    },
+    "Contains (Text u, Text v)": {
+        "prefix": [
+            "Contains"
+        ],
+        "body": [
+            "Contains($1, $2)"
+        ],
+        "description": "Returns true if v is contained in u, otherwise returns false."
+    },
+    "Contains (TextList textList, Text textToSearchFor)": {
+        "prefix": [
+            "Contains"
+        ],
+        "body": [
+            "Contains($1, $2)"
+        ],
+        "description": "Returns true if textToSearchFor is contained in textList, otherwise returns false. Comparison is not case sensitive."
+    },
+    "Contains Contains (UserList userList, User userToSearchFor)": {
+        "prefix": [
+            "Contains"
+        ],
+        "body": [
+            "Contains($1, $2)"
+        ],
+        "description": "Returns true if userToSearchFor is contained in userList, otherwise returns false."
+    },
+    "Count (\u003cany\u003e x, ...)": {
+        "prefix": [
+            "Count"
+        ],
+        "body": [
+            "Count($1)"
+        ],
+        "description": "Counts the number of non-null arguments. For Text arguments, non-blanks are counted. For Boolean arguments, trues are counted.\n\nThis function can also be used in the context of a Summary report where it will count the # of Non-null records for each grouping, if used to specify the field to check in a Calculated Column."
+    },
+    "Date (Number year, Number month, Number day)": {
+        "prefix": [
+            "Date"
+        ],
+        "body": [
+            "Date($1, $2, $3)"
+        ],
+        "description": "Creates a date from a year, month and day."
+    },
+    "Date variable": {
+        "prefix": [
+            "var Date",
+            "Date"
+        ],
+        "body": [
+            "var Date $1 = $2;"
+        ],
+        "description": "Create a Date variable"
+    },
+    "Datetime variable": {
+        "prefix": [
+            "var Datetime",
+            "Datetime"
+        ],
+        "body": [
+            "var Datetime $1 = $2;"
+        ],
+        "description": "Create a Datetime variable"
+    },
+    "Day (Date d)": {
+        "prefix": [
+            "Day"
+        ],
+        "body": [
+            "Day($1)"
+        ],
+        "description": "Returns the day of the month of the given Date d."
+    },
+    "DayOfWeek (Date d)": {
+        "prefix": [
+            "DayOfWeek"
+        ],
+        "body": [
+            "DayOfWeek($1)"
+        ],
+        "description": "Returns the number of days by which the given date d follows the first day of the week (Sunday returns 0)."
+    },
+    "DayOfYear (Date d)": {
+        "prefix": [
+            "DayOfYear"
+        ],
+        "body": [
+            "DayOfYear($1)"
+        ],
+        "description": "Returns the number of days by which the given date d follows the first day of the year (January 1 returns 0)."
+    },
+    "Days (Number n)": {
+        "prefix": [
+            "Days"
+        ],
+        "body": [
+            "Days($1)"
+        ],
+        "description": "Returns a Duration representing n days. This function takes a number and converts it into a Duration type value, expressed in days."
+    },
+    "Dbid ()": {
+        "prefix": [
+            "Dbid"
+        ],
+        "body": [
+            "Dbid()"
+        ],
+        "description": "Returns a Text value containing the database ID of a table."
+    },
+    "Duration variable": {
+        "prefix": [
+            "var Duration",
+            "Duration"
+        ],
+        "body": [
+            "var Duration $1 = $2;"
+        ],
+        "description": "Create a Duration variable"
+    },
+    "Ends (Text u, Text v)": {
+        "prefix": [
+            "Ends"
+        ],
+        "body": [
+            "Ends($1, $2)"
+        ],
+        "description": "Returns true if the text u ends with the text v, otherwise returns false."
+    },
+    "Exp (Number n)": {
+        "prefix": [
+            "Exp"
+        ],
+        "body": [
+            "Exp($1)"
+        ],
+        "description": "Returns e raised to the nth power, where e is approximately 2.71828182845905\n\nThis exponential function is for use in logarithmic calculations that track growth. For example, you can use it to figure compounding interest."
+    },
+    "FirstDayOfMonth (Date d)": {
+        "prefix": [
+            "FirstDayOfMonth"
+        ],
+        "body": [
+            "FirstDayOfMonth($1)"
+        ],
+        "description": "Returns the first day of the month in which the date falls."
+    },
+    "FirstDayOfPeriod (Date d, Duration p, Date r)": {
+        "prefix": [
+            "FirstDayOfPeriod"
+        ],
+        "body": [
+            "FirstDayOfPeriod($1, $2, $3)"
+        ],
+        "description": "Returns the first day of the period in which the date d falls. \n\nThe cycle of periods is defined by the given Duration p, repeated in sequence starting at the given reference date r. If the period p is not a whole number of days, the fractional part is ignored."
+    },
+    "FirstDayOfWeek (Date d)": {
+        "prefix": [
+            "FirstDayOfWeek"
+        ],
+        "body": [
+            "FirstDayOfWeek($1)"
+        ],
+        "description": "Returns the first day (Sunday) of the week in which the date falls."
+    },
+    "FirstDayOfYear (Date d)": {
+        "prefix": [
+            "FirstDayOfYear"
+        ],
+        "body": [
+            "FirstDayOfYear($1)"
+        ],
+        "description": "Returns the first day of the year in which the date falls."
+    },
+    "Floor (Duration x, Duration y)": {
+        "prefix": [
+            "Floor"
+        ],
+        "body": [
+            "Floor($1, $2)"
+        ],
+        "description": "Returns the largest multiple of the duration y which is less than or equal to the duration x."
+    },
+    "Floor (Number x)": {
+        "prefix": [
+            "Floor"
+        ],
+        "body": [
+            "Floor($1)"
+        ],
+        "description": "Returns the largest integer less than or equal to the number x.  \n\nNote that if x is a negative fraction, the result is closer to negative infinity than x is (compare to function Int)."
+    },
+    "Floor (Number x, Number y)": {
+        "prefix": [
+            "Floor"
+        ],
+        "body": [
+            "Floor($1, $2)"
+        ],
+        "description": "Returns the largest multiple of y which is less than or equal to x."
+    },
+    "Frac (Number n)": {
+        "prefix": [
+            "Frac"
+        ],
+        "body": [
+            "Frac($1)"
+        ],
+        "description": "Returns the fractional part of the Number n.  The result is the same sign as n.  For any Number n, Int(n) + Frac(n) is the same as n."
+    },
+    "GetFieldProperty (Number fid, Text prop)": {
+        "prefix": [
+            "GetFieldProperty"
+        ],
+        "body": [
+            "GetFieldProperty($1, $2)"
+        ],
+        "description": "Returns the value of the field property prop, in the field fid, in the current table.\u0026nbsp; The properties currently supported are \u0026quot;currencyFormat\u0026quot;, \u0026quot;currencySymbol\u0026quot;, \u0026quot;fieldType\u0026quot;, \u0026quot;maxLength\u0026quot;, \u0026quot;required\u0026quot;, and \u0026quot;unique\u0026quot;."
+    },
+    "Hour (TimeOfDay t)": {
+        "prefix": [
+            "Hour"
+        ],
+        "body": [
+            "Hour($1)"
+        ],
+        "description": "Returns the hour part of the argument t. The hour is in the range 0 to 23."
+    },
+    "Hours (Number n)": {
+        "prefix": [
+            "Hours"
+        ],
+        "body": [
+            "Hours($1)"
+        ],
+        "description": "Returns a Duration representing n hours. This function takes a number and converts it into a Duration type value, expressed in hours."
+    },
+    "If (Boolean condition1, \u003cany\u003e result1, ..., \u003cany\u003e else-result)": {
+        "prefix": [
+            "If"
+        ],
+        "body": [
+            "If($1, $2)"
+        ],
+        "description": "If condition1 is true, returns result1, otherwise returns else-result. \n\nYou can include additional condition/result pairs before the final else-result (as in the first example).  QuickBase evaluates the conditions in sequence until one is found to be true, and then the corresponding result is returned.\n\nThe else-result is optional. If omitted, QuickBase assumes it's null (or empty - a blank).\n\nAll conditions must be of type Boolean (return a true or a false). Results may be of any type, but they must all be the same type."
+    },
+    "Includes (UserList ul, UserList ul1,UserList ul2 ..)": {
+        "prefix": [
+            "Includes"
+        ],
+        "body": [
+            "Includes($1, $2)"
+        ],
+        "description": "This function takes 2 or more list-user field types as arguments and returns true if  the contents of all the the arguments together, except for the first, are included in the contents of first argument; false otherwise."
+    },
+    "Int (Number n)": {
+        "prefix": [
+            "Int"
+        ],
+        "body": [
+            "Int($1)"
+        ],
+        "description": "Returns the integer part of Number n.  \n\nNote that if n is a negative fraction, the result is closer to 0 than n is (compare to function Floor)."
+    },
+    "IsLeapDay (Date d)": {
+        "prefix": [
+            "IsLeapDay"
+        ],
+        "body": [
+            "IsLeapDay($1)"
+        ],
+        "description": "Returns true if d is February 29."
+    },
+    "IsLeapYear (Date d)": {
+        "prefix": [
+            "IsLeapYear"
+        ],
+        "body": [
+            "IsLeapYear($1)"
+        ],
+        "description": "Returns true if the date d falls in a leap year."
+    },
+    "IsLeapYear (Number y)": {
+        "prefix": [
+            "IsLeapYear"
+        ],
+        "body": [
+            "IsLeapYear($1)"
+        ],
+        "description": "Returns true if the year y is a leap year."
+    },
+    "IsNull (\u003cany\u003e x)": {
+        "prefix": [
+            "IsNull"
+        ],
+        "body": [
+            "IsNull($1)"
+        ],
+        "description": "Null means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null.\n\nThe result of this function is true if x is null, otherwise false. The argument x may be of any data type (except text or boolean)."
+    },
+    "IsUserEmail (Text x)": {
+        "prefix": [
+            "IsUserEmail"
+        ],
+        "body": [
+            "IsUserEmail($1)"
+        ],
+        "description": "Returns true if x is the email address of the current user."
+    },
+    "IsWeekday (Date d)": {
+        "prefix": [
+            "IsWeekday"
+        ],
+        "body": [
+            "IsWeekday($1)"
+        ],
+        "description": "Returns true if d is a weekday, otherwise false."
+    },
+    "LastDayOfMonth (Date d)": {
+        "prefix": [
+            "LastDayOfMonth"
+        ],
+        "body": [
+            "LastDayOfMonth($1)"
+        ],
+        "description": "Returns the last day of the month in which the date falls."
+    },
+    "LastDayOfPeriod (Date d, Duration p, Date r)": {
+        "prefix": [
+            "LastDayOfPeriod"
+        ],
+        "body": [
+            "LastDayOfPeriod($1, $2, $3)"
+        ],
+        "description": "Returns the last day of the period in which the date falls. \n\nThe cycle of periods is defined by the given Duration p, repeated in sequence starting at the given reference date r. If the period p is not a whole number of days, the fractional part is ignored."
+    },
+    "LastDayOfWeek (Date d)": {
+        "prefix": [
+            "LastDayOfWeek"
+        ],
+        "body": [
+            "LastDayOfWeek($1)"
+        ],
+        "description": "Returns the last day (Saturday) of the week in which the date falls."
+    },
+    "LastDayOfYear (Date d)": {
+        "prefix": [
+            "LastDayOfYear"
+        ],
+        "body": [
+            "LastDayOfYear($1)"
+        ],
+        "description": "Returns the last day of the year in which the date falls."
+    },
+    "Left (Text t, Number n)": {
+        "prefix": [
+            "Left"
+        ],
+        "body": [
+            "Left($1, $2)"
+        ],
+        "description": "Returns the leftmost n characters from the Text argument t."
+    },
+    "Left (Text t, Text d)": {
+        "prefix": [
+            "Left"
+        ],
+        "body": [
+            "Left($1, $2)"
+        ],
+        "description": "Returns the left part of a text value up to but not including the first occurrence of a delimiter character.  The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters."
+    },
+    "Length (Text t)": {
+        "prefix": [
+            "Length"
+        ],
+        "body": [
+            "Length($1)"
+        ],
+        "description": "Returns the number of characters in t."
+    },
+    "List (Text d, Text t1, Text t2, ...)": {
+        "prefix": [
+            "List"
+        ],
+        "body": [
+            "List($1, $2, $3)"
+        ],
+        "description": "Concatenates (strings together) all arguments starting with the second argument, using the first argument as the delimiter between them. If one of the arguments is blank, it and the corresponding delimiter are omitted."
+    },
+    "Ln (Number n)": {
+        "prefix": [
+            "Ln"
+        ],
+        "body": [
+            "Ln($1)"
+        ],
+        "description": "Returns the natural (base e) logarithm of n."
+    },
+    "Log (Number n)": {
+        "prefix": [
+            "Log"
+        ],
+        "body": [
+            "Log($1)"
+        ],
+        "description": "Returns the base 10 logarithm of n."
+    },
+    "Lower (Text t)": {
+        "prefix": [
+            "Lower"
+        ],
+        "body": [
+            "Lower($1)"
+        ],
+        "description": "Returns t converted to lower case."
+    },
+    "MSecond (TimeOfDay t)": {
+        "prefix": [
+            "MSecond"
+        ],
+        "body": [
+            "MSecond($1)"
+        ],
+        "description": "Returns the millisecond part of the argument t. The millisecond is in the range 0 to 999."
+    },
+    "MSeconds (Number n)": {
+        "prefix": [
+            "MSeconds"
+        ],
+        "body": [
+            "MSeconds($1)"
+        ],
+        "description": "Returns a Duration representing n milliseconds. This function takes a number and converts it into a Duration type value, expressed in milliseconds."
+    },
+    "Max (\u003cany\u003e x, \u003cany\u003e y, ...)": {
+        "prefix": [
+            "Max"
+        ],
+        "body": [
+            "Max($1, $2)"
+        ],
+        "description": "This function can take 2 or more arguments of any data type, as long as they are all the same type. The result is the same data type as the arguments. Null values are ignored.\n\nFor Numbers, returns the argument that is greatest.\nFor Text, returns the argument that sorts last alphabetically.\nFor Durations, returns the argument that is longest.\nFor Dates returns the argument that is latest.\nFor Date/Time, returns the argument that is latest.\nFor TimeOfDays, returns the argument that is latest.\nFor Booleans returns the argument that is largest, treating false as less than true."
+    },
+    "Mid (Text t, Number p, Number n)": {
+        "prefix": [
+            "Mid"
+        ],
+        "body": [
+            "Mid($1, $2, $3)"
+        ],
+        "description": "Returns n characters from the middle of t, starting at position p.  The first character is position 1."
+    },
+    "Min (\u003cany\u003e x, \u003cany\u003e y, ...)": {
+        "prefix": [
+            "Min"
+        ],
+        "body": [
+            "Min($1, $2)"
+        ],
+        "description": "This function can take 2 or more arguments of any data type, as long as they are all the same type. The result is the same data type as the arguments.  Null values are ignored.\n\nFor Numbers, returns the argument that is least.\nFor Text, returns the argument that sorts first alphabetically.\nFor Durations, returns the argument that is shortest.\nFor Dates returns the argument that is earliest.\nFor Date/Time, returns the argument that is earliest.\nFor TimeOfDays, returns the argument that is earliest.\nFor Booleans returns the argument that is smallest, treating false as less than true."
+    },
+    "Minute (TimeOfDay t)": {
+        "prefix": [
+            "Minute"
+        ],
+        "body": [
+            "Minute($1)"
+        ],
+        "description": "Returns the minute part of the argument t. The minute is in the range 0 to 59."
+    },
+    "Minutes (Number n)": {
+        "prefix": [
+            "Minutes"
+        ],
+        "body": [
+            "Minutes($1)"
+        ],
+        "description": "Returns a Duration representing n minutes.  This function takes a number and converts it into a Duration type value, expressed in minutes."
+    },
+    "Mod (Duration n, Duration m)": {
+        "prefix": [
+            "Mod"
+        ],
+        "body": [
+            "Mod($1, $2)"
+        ],
+        "description": "Returns n modulo m.  (Mod is the same as Rem for positive numbers, but different for negative numbers.)"
+    },
+    "Mod (Number n, Number m)": {
+        "prefix": [
+            "Mod"
+        ],
+        "body": [
+            "Mod($1, $2)"
+        ],
+        "description": "Returns n modulo m.  Mod implements 'clock' arithmetic; it models movement around a clock that is labeled with the numbers 0 to m-1. To get the result, just count n times around the clock. (Mod is the same as Rem for positive numbers, but different for negative numbers.)\n\nYou might use this function to auto-assign tasks to staff members. For details, please read \u003ca href=\"http://www.quickbase.com/developer/knowledge-base/how-can-i-auto-assign-records-users-my-application-using-formula-i-want-randomly-and-evenly-\"\u003ethis article\u003c/a\u003e"
+    },
+    "Month (Date d)": {
+        "prefix": [
+            "Month"
+        ],
+        "body": [
+            "Month($1)"
+        ],
+        "description": "Returns the month number of the Date d. January is month 1."
+    },
+    "NameOfMonth (Date d)": {
+        "prefix": [
+            "NameOfMonth"
+        ],
+        "body": [
+            "NameOfMonth($1)"
+        ],
+        "description": "Returns the name of the month containing the given date."
+    },
+    "NameOfMonth (Date/Time dt)": {
+        "prefix": [
+            "NameOfMonth"
+        ],
+        "body": [
+            "NameOfMonth($1)"
+        ],
+        "description": "Returns the name of the month containing the given Date/Time.\u0026nbsp; Note that this is evaluated in the app\u0026#39;s local time zone, not GMT."
+    },
+    "NameOfMonth (Number n)": {
+        "prefix": [
+            "NameOfMonth"
+        ],
+        "body": [
+            "NameOfMonth($1)"
+        ],
+        "description": "Returns the name of the month whose number is n.\u0026nbsp; Please be sure n is a whole number between 1 and 12."
+    },
+    "NextDayOfWeek (Date d, Number n)": {
+        "prefix": [
+            "NextDayOfWeek"
+        ],
+        "body": [
+            "NextDayOfWeek($1, $2)"
+        ],
+        "description": "Returns the first day after the given date d that falls on the weekday n.\n\nn is a number from 0 to 6 with Sunday being 0, Monday being 1, Tuesday being 2, and so on."
+    },
+    "NotLeft (Text t, Number n)": {
+        "prefix": [
+            "NotLeft"
+        ],
+        "body": [
+            "NotLeft($1, $2)"
+        ],
+        "description": "Returns what remains after excluding the leftmost n characters from the Text argument t."
+    },
+    "NotLeft (Text t, Text d)": {
+        "prefix": [
+            "NotLeft"
+        ],
+        "body": [
+            "NotLeft($1, $2)"
+        ],
+        "description": "Returns what remains after excluding the left part of a text value up to and including the first occurrence of a delimiter character.  The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters.\n\nIf space is included in the delimiter list it is handled specially. It acts as a delimiter, but contiguous spaces surrounding a delimiter are ignored rather than each acting as a separate delimiter."
+    },
+    "NotRight (Text t, Number n)": {
+        "prefix": [
+            "NotRight"
+        ],
+        "body": [
+            "NotRight($1, $2)"
+        ],
+        "description": "Returns what remains after excluding the rightmost n characters from the Text argument t."
+    },
+    "NotRight (Text t, Text d)": {
+        "prefix": [
+            "NotRight"
+        ],
+        "body": [
+            "NotRight($1, $2)"
+        ],
+        "description": "Returns what remains after excluding the right part of a text value starting at the last occurrence of a delimiter character.  The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters.\n\nIf space is included in the delimiter list it is handled specially. It acts as a delimiter, but contiguous spaces surrounding a delimiter are ignored rather than each acting as a separate delimiter."
+    },
+    "Now ()": {
+        "prefix": [
+            "Now"
+        ],
+        "body": [
+            "Now()"
+        ],
+        "description": "Returns a Date / Time value representing the current moment."
+    },
+    "Number variable": {
+        "prefix": [
+            "var Number",
+            "Number"
+        ],
+        "body": [
+            "var Number $1 = $2;"
+        ],
+        "description": "Create a Number variable"
+    },
+    "Nz (Date x, Date y)": {
+        "prefix": [
+            "Nz"
+        ],
+        "body": [
+            "Nz($1, $2)"
+        ],
+        "description": "This function returns x if x is not null. If it is null, it returns the alternate value y instead.\n\nNull means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null."
+    },
+    "Nz (Date/Time x, Date/Time y)": {
+        "prefix": [
+            "Nz"
+        ],
+        "body": [
+            "Nz($1, $2)"
+        ],
+        "description": "This function returns x if x is not null. If it is null, it returns the alternate value y instead.\n\nNull means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null."
+    },
+    "Nz (Duration d)": {
+        "prefix": [
+            "Nz"
+        ],
+        "body": [
+            "Nz($1)"
+        ],
+        "description": "This function returns d if d is not null.  If it is null, it returns a 0-length duration instead. \n\nAn undefined or empty field is \"null.\" Null values don't work in calculations, which is where the Nz() function comes in handy. When Nz() finds a null, it sees it as a zero. So, if you want to perform calculations on a field that may include a null, use the Nz function."
+    },
+    "Nz (Duration x, Duration y)": {
+        "prefix": [
+            "Nz"
+        ],
+        "body": [
+            "Nz($1, $2)"
+        ],
+        "description": "This function returns x if x is not null. If it is null, it returns the alternate value y instead.\n\nNull means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null."
+    },
+    "Nz (Number x)": {
+        "prefix": [
+            "Nz"
+        ],
+        "body": [
+            "Nz($1)"
+        ],
+        "description": "This function returns x if x is not null.  If it is null, it returns 0 instead. \n\nAn undefined or empty field is \"null.\" Null values don't work in numeric calculations, which is where the Nz() function comes in handy. When Nz() finds a null, it sees it as a zero. So, if you want to perform calculations on a field that may include a null, use the Nz function."
+    },
+    "Nz (Number x, Number y)": {
+        "prefix": [
+            "Nz"
+        ],
+        "body": [
+            "Nz($1, $2)"
+        ],
+        "description": "This function returns x if x is not null. If it is null, it returns the alternate value y instead.\n\nNull means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null."
+    },
+    "Nz (TimeOfDay x, TimeOfDay y)": {
+        "prefix": [
+            "Nz"
+        ],
+        "body": [
+            "Nz($1, $2)"
+        ],
+        "description": "This function returns x if x is not null. If it is null, it returns the alternate value y instead.\n\nNull means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null."
+    },
+    "PV (Number rate, Number nskip, Number amt)": {
+        "prefix": [
+            "PV"
+        ],
+        "body": [
+            "PV($1, $2, $3)"
+        ],
+        "description": "Calculates the Present Value of a future payment. Rate is the discount rate for one time period. Nskip is the number of time periods before the payment occurs. Amt is the amount of the payment."
+    },
+    "PV (Number rate, Number nskip, Number amt, Number npay)": {
+        "prefix": [
+            "PV"
+        ],
+        "body": [
+            "PV($1, $2, $3, $4)"
+        ],
+        "description": "Calculates the Present Value of a series of future payments. Rate is the discount rate for one time period. Nskip is the number of time periods before the first payment occurs. Amt is the amount of each payment. Npay is the number of payments in the series, spaced one time period apart."
+    },
+    "PadLeft (Text textToPad, Number targetLength, Text paddingText)": {
+        "prefix": [
+            "PadLeft"
+        ],
+        "body": [
+            "PadLeft($1, $2, $3)"
+        ],
+        "description": "Extends text to a target length by adding padding to the left of the text. If the text is already the target length or longer, then there\u0026#39;s no change. Otherwise, the padding text is added as necessary to reach the target length. NOTE: This function pads up to a limit of 50 characters."
+    },
+    "PadRight (Text textToPad, Number targetLength, Text paddingText)": {
+        "prefix": [
+            "PadRight"
+        ],
+        "body": [
+            "PadRight($1, $2, $3)"
+        ],
+        "description": "Extends text to a target length by adding padding to the right of the text. If the text is already the target length or longer, then there\u0026#39;s no change. Otherwise, the padding text is added as necessary to reach the target length. NOTE: This function pads up to a limit of 50 characters."
+    },
+    "Part (Text t, Number p, Text d)": {
+        "prefix": [
+            "Part"
+        ],
+        "body": [
+            "Part($1, $2, $3)"
+        ],
+        "description": "Returns the specified part of a text value. The parts are separated by the occurrence of any delimiter character. The first argument, t, is the value to be searched. The second argument, p, is the position of the part in the argument t. The first part starting on the left is position 1.  Negative part numbers can be used to start from the right. The third argument, d, is a text value containing all the possible delimiter characters.\n\nIf space is included in the delimiter list it is handled specially. It acts as a delimiter, but contiguous spaces surrounding a delimiter are ignored rather than each acting as a separate delimiter."
+    },
+    "PrevDayOfWeek (Date d, Number n)": {
+        "prefix": [
+            "PrevDayOfWeek"
+        ],
+        "body": [
+            "PrevDayOfWeek($1, $2)"
+        ],
+        "description": "Returns the last day before the given date d that falls on the weekday n.\n\nn is a number from 0 to 6 with Sunday being 0, Monday being 1, Tuesday being 2, and so on."
+    },
+    "QB32Decode (Text t)": {
+        "prefix": [
+            "QB32Decode"
+        ],
+        "body": [
+            "QB32Decode($1)"
+        ],
+        "description": "Decodes text back to an integer using a base32 encoding specific to Quick Base."
+    },
+    "QB32Encode (Number p)": {
+        "prefix": [
+            "QB32Encode"
+        ],
+        "body": [
+            "QB32Encode($1)"
+        ],
+        "description": "Encodes an integer as text using a base32 encoding specific to Quick Base"
+    },
+    "Rem (Duration n, Duration d)": {
+        "prefix": [
+            "Rem"
+        ],
+        "body": [
+            "Rem($1, $2)"
+        ],
+        "description": "Returns a Duration that is the remainder after n is divided by d an integer number of times. (Mod is the same as Rem for positive numbers, but different for negative numbers.)"
+    },
+    "Rem (Number n, Number d)": {
+        "prefix": [
+            "Rem"
+        ],
+        "body": [
+            "Rem($1, $2)"
+        ],
+        "description": "Returns a number that is the remainder after n is divided by d an integer number of times. (Mod is the same as Rem for positive numbers, but different for negative numbers.)"
+    },
+    "Right (Text t, Number n)": {
+        "prefix": [
+            "Right"
+        ],
+        "body": [
+            "Right($1, $2)"
+        ],
+        "description": "Returns the rightmost n characters from the Text argument t."
+    },
+    "Right (Text t, Text d)": {
+        "prefix": [
+            "Right"
+        ],
+        "body": [
+            "Right($1, $2)"
+        ],
+        "description": "Returns the right part of a text value starting at the character after the last occurrence of a delimiter character.  The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters."
+    },
+    "Round (Duration x, Duration y)": {
+        "prefix": [
+            "Round"
+        ],
+        "body": [
+            "Round($1, $2)"
+        ],
+        "description": "Returns the multiple of the duration y which is nearest the duration x."
+    },
+    "Round (Number x)": {
+        "prefix": [
+            "Round"
+        ],
+        "body": [
+            "Round($1)"
+        ],
+        "description": "Returns the nearest integer to the number x. The fraction .5 rounds up to the next greater integer."
+    },
+    "Round (Number x, Number y)": {
+        "prefix": [
+            "Round"
+        ],
+        "body": [
+            "Round($1, $2)"
+        ],
+        "description": "Returns the multiple of y which is nearest to x.\n\nYou may notice small discrepancies when you use this function with floating point numbers.  For example, Round(37.785,0.01) returns 37.78 instead of 37.79. This is not a QuickBase-specific issue; the discrepancies happen because some floating point numbers cannot be represented exactly in the binary format required by computers and are instead approximated."
+    },
+    "SearchAndReplace (Text textToSearch, Text searchText, Text replacementText)": {
+        "prefix": [
+            "SearchAndReplace"
+        ],
+        "body": [
+            "SearchAndReplace($1, $2, $3)"
+        ],
+        "description": "Replaces all occurrences of a given search text with the replacement text. Search is case sensitive."
+    },
+    "Second (TimeOfDay t)": {
+        "prefix": [
+            "Second"
+        ],
+        "body": [
+            "Second($1)"
+        ],
+        "description": "Returns the second part of the argument t.  The second is in the range 0 to 59."
+    },
+    "Seconds (Number n)": {
+        "prefix": [
+            "Seconds"
+        ],
+        "body": [
+            "Seconds($1)"
+        ],
+        "description": "Returns a Duration representing n seconds. This function takes a number and converts it into a Duration type value, expressed in seconds."
+    },
+    "Split (Text textToSplit)": {
+        "prefix": [
+            "Split"
+        ],
+        "body": [
+            "Split($1)"
+        ],
+        "description": "Converts text string, in format of items list with semicolon separator, to list structure. Each item can be processed separately. Empty values and blank values are ignored. Spaces at the beginning and at the end of resulting items are removed."
+    },
+    "Split (Text textToSplit, Text delimiter)": {
+        "prefix": [
+            "Split"
+        ],
+        "body": [
+            "Split($1, $2)"
+        ],
+        "description": "Converts text string, in format of items list with\u0026nbsp;custom separator character, to list structure. Each item can be processed separately. Empty values and blank values are ignored. Spaces at the beginning and at the end of resulting items are removed."
+    },
+    "Sqrt (Number n)": {
+        "prefix": [
+            "Sqrt"
+        ],
+        "body": [
+            "Sqrt($1)"
+        ],
+        "description": "Returns the square root of n."
+    },
+    "Sum (Duration d, ...)": {
+        "prefix": [
+            "Sum"
+        ],
+        "body": [
+            "Sum($1)"
+        ],
+        "description": "Returns the sum of the non-null arguments."
+    },
+    "Sum (Number n, ...)": {
+        "prefix": [
+            "Sum"
+        ],
+        "body": [
+            "Sum($1)"
+        ],
+        "description": "Returns the sum of the non-null arguments."
+    },
+    "Text variable": {
+        "prefix": [
+            "var Text",
+            "Text"
+        ],
+        "body": [
+            "var Text $1 = $2;"
+        ],
+        "description": "Create a Text variable"
+    },
+    "Timeofday variable": {
+        "prefix": [
+            "var Timeofday",
+            "Timeofday"
+        ],
+        "body": [
+            "var Timeofday $1 = $2;"
+        ],
+        "description": "Create a Timeofday variable"
+    },
+    "ToBoolean (Number n)": {
+        "prefix": [
+            "ToBoolean"
+        ],
+        "body": [
+            "ToBoolean($1)"
+        ],
+        "description": "Returns true if the Number n is a non-zero value, otherwise returns false."
+    },
+    "ToBoolean (Text x)": {
+        "prefix": [
+            "ToBoolean"
+        ],
+        "body": [
+            "ToBoolean($1)"
+        ],
+        "description": "Converts the values \"1\", \"true\" or \"yes\" to true, other values to false. Case is ignored."
+    },
+    "ToDate (Date/Time x)": {
+        "prefix": [
+            "ToDate"
+        ],
+        "body": [
+            "ToDate($1)"
+        ],
+        "description": "Date/Time type fields have a date, time and time zone associated with them, while Dates do not have time and time zone. This function converts the Date/Time x into a Date by returning the Date, in the local time zone, in which Date/Time x falls."
+    },
+    "ToDate (Text x)": {
+        "prefix": [
+            "ToDate"
+        ],
+        "body": [
+            "ToDate($1)"
+        ],
+        "description": "Converts the text value x into a Date. x can be several of the popular date formats, including \"January 30, 2000\", \"1/30/00\", \"2000/1/30\", \"1-30-2000\""
+    },
+    "ToDays (Duration d)": {
+        "prefix": [
+            "ToDays"
+        ],
+        "body": [
+            "ToDays($1)"
+        ],
+        "description": "Takes a Duration d, and returns the number of days contained in it."
+    },
+    "ToFormattedText (Date d, Text f)": {
+        "prefix": [
+            "ToFormattedText"
+        ],
+        "body": [
+            "ToFormattedText($1, $2)"
+        ],
+        "description": "Returns a Text value which is the formatted text version of the date specified. \nThe Text argument to the function specifies the format. Choose one of:\n   MMDDYYYY\n   MMDDYY\n   DDMMYYYY\n   DDMMYY\n   YYYYMMDD"
+    },
+    "ToFormattedText (Date/Time t, Text f)": {
+        "prefix": [
+            "ToFormattedText"
+        ],
+        "body": [
+            "ToFormattedText($1, $2)"
+        ],
+        "description": "Returns a Text value which is the formatted text version of the date/time specified. \nThe Text argument to the function specifies the format. Choose one of:\n   MMDDYYYY\n   MMDDYY\n   DDMMYYYY\n   DDMMYY\n   YYYYMMDD"
+    },
+    "ToFormattedText (Duration d, Text f)": {
+        "prefix": [
+            "ToFormattedText"
+        ],
+        "body": [
+            "ToFormattedText($1, $2)"
+        ],
+        "description": "Returns a Text value containing the formatted print representation of the Duration d, using the format f.\nThe Text argument to the function specifies the format. Choose one of:\n   HHMM\n   HHMMSS\n   MMSS\n   MM\n   MSECONDS\n   SECONDS\n   MINUTES\n   HOURS\n   DAYS\n   WEEKS\n   SMART"
+    },
+    "ToFormattedText (Number n, Text f)": {
+        "prefix": [
+            "ToFormattedText"
+        ],
+        "body": [
+            "ToFormattedText($1, $2)"
+        ],
+        "description": "Returns a Text value which is the formatted text version of the number specified. \nThe Text argument to the function specifies the format. Choose one of:\n  none_dot -  returns the number formatted like 12345678.85\n  comma_dot - returns the number formatted like 12,345,678.85\n  comma_dot_2 - returns the number formatted like 1,23,45,678.85\n  none_comma - returns the number formatted like 12345678,85\n  dot_comma - returns the number formatted like 12.345.678,85\n  dot_comma_2 - returns the number formatted like 1.23.45.678,85"
+    },
+    "ToHours (Duration d)": {
+        "prefix": [
+            "ToHours"
+        ],
+        "body": [
+            "ToHours($1)"
+        ],
+        "description": "Takes a Duration d, and returns the number of hours contained in it."
+    },
+    "ToMSeconds (Duration d)": {
+        "prefix": [
+            "ToMSeconds"
+        ],
+        "body": [
+            "ToMSeconds($1)"
+        ],
+        "description": "Takes a Duration d, and returns the number of milliseconds contained in it."
+    },
+    "ToMinutes (Duration d)": {
+        "prefix": [
+            "ToMinutes"
+        ],
+        "body": [
+            "ToMinutes($1)"
+        ],
+        "description": "Takes a Duration d, and returns the number of minutes contained in it."
+    },
+    "ToNumber (Boolean b)": {
+        "prefix": [
+            "ToNumber"
+        ],
+        "body": [
+            "ToNumber($1)"
+        ],
+        "description": "Returns 0 if b is false, 1 if b is true."
+    },
+    "ToNumber (Text x)": {
+        "prefix": [
+            "ToNumber"
+        ],
+        "body": [
+            "ToNumber($1)"
+        ],
+        "description": "Returns the number represented by the Text value x."
+    },
+    "ToSeconds (Duration d)": {
+        "prefix": [
+            "ToSeconds"
+        ],
+        "body": [
+            "ToSeconds($1)"
+        ],
+        "description": "Takes a Duration d, and returns the number of seconds contained in it."
+    },
+    "ToText (\u003cany\u003e x)": {
+        "prefix": [
+            "ToText"
+        ],
+        "body": [
+            "ToText($1)"
+        ],
+        "description": "Returns a Text value containing the print representation of the argument x."
+    },
+    "ToTimeOfDay (Date/Time t)": {
+        "prefix": [
+            "ToTimeOfDay"
+        ],
+        "body": [
+            "ToTimeOfDay($1)"
+        ],
+        "description": "Date/Time fields display the date and time. This function returns the TimeOfDay on which the Date/Time t falls in the local time zone."
+    },
+    "ToTimeOfDay (Text x)": {
+        "prefix": [
+            "ToTimeOfDay"
+        ],
+        "body": [
+            "ToTimeOfDay($1)"
+        ],
+        "description": "Converts the text value x into a TimeOfDay. x can be several of the popular time formats, including \"3 pm\", \"3:04 am\", \"22:00\", \"2:03:29 am\", \"12:03:29.345\"."
+    },
+    "ToTimestamp (Date d)": {
+        "prefix": [
+            "ToTimestamp"
+        ],
+        "body": [
+            "ToTimestamp($1)"
+        ],
+        "description": "Returns a Date / Time value which is 12:00 am of the given Date d in the local time zone (midnight at the beginning of the Date)."
+    },
+    "ToTimestamp (Date d, TimeOfDay t)": {
+        "prefix": [
+            "ToTimestamp"
+        ],
+        "body": [
+            "ToTimestamp($1, $2)"
+        ],
+        "description": "Returns a Date / Time value which is at the given TimeOfDay t, on the given Date d in the local time zone"
+    },
+    "ToUser (Text t)": {
+        "prefix": [
+            "ToUser"
+        ],
+        "body": [
+            "ToUser($1)"
+        ],
+        "description": "Converts a user name or e-mail address to a user value. A \"user\" is an individual with whom you've shared your application. You'd translate something like an e-mail address into a user value so that QuickBase recognizes the user. When you do so, you can take advantage of user fields to design permissions and/or views. For example, show a user only those tasks that have been assigned to her."
+    },
+    "ToUserList (User u ..)": {
+        "prefix": [
+            "ToUserList"
+        ],
+        "body": [
+            "ToUserList()"
+        ],
+        "description": "\u003cp\u003eConcatenates the contents of one or more user type fields into a user list field type.\u003c/p\u003e\n\n\u003cp\u003eThis field is of type List-User and has a limit of 20 entries. If the resulting value of this field in a record exceeds the maximum entries allowed the resulting value will be set to blank.\u003c/p\u003e"
+    },
+    "ToUserList (UserList ul ..)": {
+        "prefix": [
+            "ToUserList"
+        ],
+        "body": [
+            "ToUserList()"
+        ],
+        "description": "\u003cdiv class=\"cell cc RichTextField\" id=\"tdf_5\"\u003e\n\u003cp\u003eConcatenates the contents of one or more user type fields into a user list field type.\u003c/p\u003e\n\n\u003cp\u003eThis field is of type List-User and has a limit of 20 entries. If the resulting value of this field in a record exceeds the maximum entries allowed the resulting value will be set to blank.\u003c/p\u003e\n\u003c/div\u003e"
+    },
+    "ToWeekdayN (Date d)": {
+        "prefix": [
+            "ToWeekdayN"
+        ],
+        "body": [
+            "ToWeekdayN($1)"
+        ],
+        "description": "If the given date d is a weekday returns it, otherwise returns the next occurring weekday."
+    },
+    "ToWeekdayP (Date d)": {
+        "prefix": [
+            "ToWeekdayP"
+        ],
+        "body": [
+            "ToWeekdayP($1)"
+        ],
+        "description": "If the given date d is a weekday returns it, otherwise returns the previously occurring weekday."
+    },
+    "ToWeeks (Duration d)": {
+        "prefix": [
+            "ToWeeks"
+        ],
+        "body": [
+            "ToWeeks($1)"
+        ],
+        "description": "Takes a Duration d, and returns the number of weeks contained in it."
+    },
+    "ToWorkDate (Date d)": {
+        "prefix": [
+            "ToWorkDate"
+        ],
+        "body": [
+            "ToWorkDate($1)"
+        ],
+        "description": "Converts a date d to a WorkDate."
+    },
+    "Today ()": {
+        "prefix": [
+            "Today"
+        ],
+        "body": [
+            "Today()"
+        ],
+        "description": "Returns the current date in the local time zone."
+    },
+    "Trim (Text t)": {
+        "prefix": [
+            "Trim"
+        ],
+        "body": [
+            "Trim($1)"
+        ],
+        "description": "Returns t with leading and trailing white space characters removed. White space characters are space, tab, CR and LF."
+    },
+    "URLEncode (Text t)": {
+        "prefix": [
+            "URLEncode"
+        ],
+        "body": [
+            "URLEncode($1)"
+        ],
+        "description": "Encodes the text t so that it can be used in a URL, by substituting special character combinations for certain reserved characters, like '\u0026' and '=' and space."
+    },
+    "URLRoot ()": {
+        "prefix": [
+            "URLRoot"
+        ],
+        "body": [
+            "URLRoot()"
+        ],
+        "description": "Returns the first part of the URL used to access QuickBase, including the protocol and the site name."
+    },
+    "Upper (Text t)": {
+        "prefix": [
+            "Upper"
+        ],
+        "body": [
+            "Upper($1)"
+        ],
+        "description": "Returns t converted to upper case."
+    },
+    "User ()": {
+        "prefix": [
+            "User"
+        ],
+        "body": [
+            "User()"
+        ],
+        "description": "Returns the user currently accessing the database."
+    },
+    "User variable": {
+        "prefix": [
+            "var User",
+            "User"
+        ],
+        "body": [
+            "var User $1 = $2;"
+        ],
+        "description": "Create a User variable"
+    },
+    "UserListToEmails (UserList ul)": {
+        "prefix": [
+            "UserListToEmails"
+        ],
+        "body": [
+            "UserListToEmails($1)"
+        ],
+        "description": "Returns a semi-colon separated list of email addresses for all the users selected on the User List field.\n\nThis function won't work for users who have hidden their e-mail address by choosing a screen name."
+    },
+    "UserListToIds (UserList ul)": {
+        "prefix": [
+            "UserListToIds"
+        ],
+        "body": [
+            "UserListToIds($1)"
+        ],
+        "description": "Returns a semi-colon separated list of users\u0026#39; hashed IDs."
+    },
+    "UserListToNames (UserList ul)": {
+        "prefix": [
+            "UserListToNames"
+        ],
+        "body": [
+            "UserListToNames($1)"
+        ],
+        "description": "Returns a semi-colon separated list of the users' full names, first name first."
+    },
+    "UserListToNames (UserList ul, Text format)": {
+        "prefix": [
+            "UserListToNames"
+        ],
+        "body": [
+            "UserListToNames($1, $2)"
+        ],
+        "description": "Returns a semi-colon separated list of users' full names. Specify text format by including \"FF\" to return the full names with the first name first. Or, include \"LF\" to return the full names with the last name first."
+    },
+    "UserRoles (\"ID/Name/Empty\")": {
+        "prefix": [
+            "UserRoles"
+        ],
+        "body": [
+            "UserRoles($1)"
+        ],
+        "description": "Returns information about the current user\u0026rsquo;s role. Use in a Formula Multi-select Text field."
+    },
+    "UserToEmail (User x)": {
+        "prefix": [
+            "UserToEmail"
+        ],
+        "body": [
+            "UserToEmail($1)"
+        ],
+        "description": "Returns the user's e-mail address.\n\nThis function won't work for users who have hidden their e-mail address."
+    },
+    "UserToId (User x)": {
+        "prefix": [
+            "UserToId"
+        ],
+        "body": [
+            "UserToId($1)"
+        ],
+        "description": "Returns a given user\u0026#39;s hashed ID."
+    },
+    "UserToName (User x)": {
+        "prefix": [
+            "UserToName"
+        ],
+        "body": [
+            "UserToName($1)"
+        ],
+        "description": "Returns the user's full name, first name first."
+    },
+    "UserToName (User x, Text format)": {
+        "prefix": [
+            "UserToName"
+        ],
+        "body": [
+            "UserToName($1, $2)"
+        ],
+        "description": "Returns a given user's full name. Specify text format by including \"FF\" to return the full name with the first name first. Or, include \"LF\" to return the full name with the last name first."
+    },
+    "WeekOfYear (Date d)": {
+        "prefix": [
+            "WeekOfYear"
+        ],
+        "body": [
+            "WeekOfYear($1)"
+        ],
+        "description": "Returns the number of weeks by which the given date d follows the first week of the year based on ISO standards. First day of week is a Monday. First week contains the first Thursday of January."
+    },
+    "WeekdayAdd (Date d, Number n)": {
+        "prefix": [
+            "WeekdayAdd"
+        ],
+        "body": [
+            "WeekdayAdd($1, $2)"
+        ],
+        "description": "Returns the date that is n weekdays past the given date d.  n may be negative to move backward in time."
+    },
+    "WeekdayAdd (WorkDate d, Number n)": {
+        "prefix": [
+            "WeekdayAdd"
+        ],
+        "body": [
+            "WeekdayAdd($1, $2)"
+        ],
+        "description": "Returns the date obtained by adding n weekdays to the date d. The calculation includes the date d as one of the n days. For example, adding 2 days to 10/31/2003 which is a Friday will give you 11/03/2003 since it counts 10/31/2003 as 1 day and 11/03/2003 (a Monday) as the second day."
+    },
+    "WeekdaySub (Date d2, Date d1)": {
+        "prefix": [
+            "WeekdaySub"
+        ],
+        "body": [
+            "WeekdaySub($1, $2)"
+        ],
+        "description": "Returns the number of weekdays in the interval starting with d1 and ending on the day before d2 (same as subtracting Dates, but the result is the number of weekdays instead of a Duration). It is the inverse of WeekdayAdd."
+    },
+    "Weeks (Number n)": {
+        "prefix": [
+            "Weeks"
+        ],
+        "body": [
+            "Weeks($1)"
+        ],
+        "description": "Returns a Duration representing n weeks. This function takes a number and converts it into a Duration type value, expressed in weeks."
+    },
+    "Workdate variable": {
+        "prefix": [
+            "var Workdate",
+            "Workdate"
+        ],
+        "body": [
+            "var Workdate $1 = $2;"
+        ],
+        "description": "Create a Workdate variable"
+    },
+    "WorkdayAdd (WorkDate d, Numeric n)": {
+        "prefix": [
+            "WorkdayAdd"
+        ],
+        "body": [
+            "WorkdayAdd($1, $2)"
+        ],
+        "description": "Returns the date obtained by adding n days to the date d. The calculation includes the date d as one of the n days. For example, adding 2 days to 10/31/2003 which is a Friday will give you 11/01/2003 since it counts 10/31/2003 as 1 day and 11/01/2003 (a Saturday) as the second day."
+    },
+    "Year (Date d)": {
+        "prefix": [
+            "Year"
+        ],
+        "body": [
+            "Year($1)"
+        ],
+        "description": "Returns the year number of the Date d."
+    }
+}
