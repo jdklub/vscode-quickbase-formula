@@ -24,6 +24,12 @@
             "language": "quickbase",
             "scopeName": "source.quickbase",
             "path": "./syntaxes/quickbase.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+              "language": "quickbase",
+              "path": "./snippets/snippets.json"
+            }
+        ]
     }
 }
