@@ -3,7 +3,10 @@
 	"name": "Quickbase Formula",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#keyword"
+		},
+		{
+			"include": "#constant"
 		},
 		{
 			"include": "#strings"
@@ -31,10 +34,16 @@
 				"match": "\\/{2}.*"
 			}]
 		},
-		"keywords": {
+		"constant": {
+			"patterns": [{
+				"name": "constant.language.quickbase",
+				"match": "\\b(true|false|null)\\b"
+			}]
+		},
+		"keyword": {
 			"patterns": [{
 				"name": "keyword.control.quickbase",
-				"match": "\\b(and|or|not)\\b|&"
+				"match": "\\b(and|or|not)\\b"
 			}]
 		},
 		"storage": {
@@ -44,7 +53,7 @@
 			},
 			{
 				"name": "storage.modifier.quickbase",
-				"match": "\\b(bool|text|number|date|datetime|duration|timeofday|workdate|user)\\b"
+				"match": "\\b(Bool|Text|Number|Date|Datetime|Duration|Timeofday|Workdate|User)\\b"
 			}]
 		},
 		"operator": {
