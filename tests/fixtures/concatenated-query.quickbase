@@ -1,0 +1,1 @@
+var RecordList ownerProjects = GetRecords("{6.EX.'" & [Manager] & "'}", [_DBID_PROJECTS]);

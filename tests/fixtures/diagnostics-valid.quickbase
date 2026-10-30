@@ -1,0 +1,11 @@
+var Text statusQuery = "{'6'.EX.'In Progress'}";
+var Text todayQuery = "{'13'.EX.today}";
+var Text currentUserQuery = "{'20'.TV._curuser_}";
+var RecordList openProjects = GetRecords($statusQuery, [_DBID_PROJECTS]);
+var RecordList ownerProjects = GetRecords("{6.EX.'" & [Manager] & "'}", [_DBID_PROJECTS]);
+var TextList owners = GetFieldValues($openProjects, 8);
+var Text ownerSummary = Join($owners, "; ");
+var Number ownerCount = Size($owners);
+var Bool hasOwners = not IsNull($ownerSummary) and $ownerCount > 0;
+
+$ownerSummary

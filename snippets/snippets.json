@@ -118,11 +118,13 @@
     },
     "Bool variable": {
         "prefix": [
+            "var bool",
             "var Bool",
+            "bool",
             "Bool"
         ],
         "body": [
-            "var Bool $1 = $2;"
+            "var bool $1 = $2;"
         ],
         "description": "Create a Bool variable"
     },
@@ -209,21 +211,25 @@
     },
     "Date variable": {
         "prefix": [
+            "var date",
             "var Date",
+            "date",
             "Date"
         ],
         "body": [
-            "var Date $1 = $2;"
+            "var date $1 = $2;"
         ],
         "description": "Create a Date variable"
     },
     "Datetime variable": {
         "prefix": [
+            "var datetime",
             "var Datetime",
+            "datetime",
             "Datetime"
         ],
         "body": [
-            "var Datetime $1 = $2;"
+            "var datetime $1 = $2;"
         ],
         "description": "Create a Datetime variable"
     },
@@ -274,11 +280,13 @@
     },
     "Duration variable": {
         "prefix": [
+            "var duration",
             "var Duration",
+            "duration",
             "Duration"
         ],
         "body": [
-            "var Duration $1 = $2;"
+            "var duration $1 = $2;"
         ],
         "description": "Create a Duration variable"
     },
@@ -752,11 +760,13 @@
     },
     "Number variable": {
         "prefix": [
+            "var number",
             "var Number",
+            "number",
             "Number"
         ],
         "body": [
-            "var Number $1 = $2;"
+            "var number $1 = $2;"
         ],
         "description": "Create a Number variable"
     },
@@ -1032,21 +1042,27 @@
     },
     "Text variable": {
         "prefix": [
+            "var text",
             "var Text",
+            "text",
             "Text"
         ],
         "body": [
-            "var Text $1 = $2;"
+            "var text $1 = $2;"
         ],
         "description": "Create a Text variable"
     },
     "Timeofday variable": {
         "prefix": [
+            "var timeofday",
+            "var TimeOfDay",
             "var Timeofday",
+            "timeofday",
+            "TimeOfDay",
             "Timeofday"
         ],
         "body": [
-            "var Timeofday $1 = $2;"
+            "var timeofday $1 = $2;"
         ],
         "description": "Create a Timeofday variable"
     },
@@ -1349,11 +1365,13 @@
     },
     "User variable": {
         "prefix": [
+            "var user",
             "var User",
+            "user",
             "User"
         ],
         "body": [
-            "var User $1 = $2;"
+            "var user $1 = $2;"
         ],
         "description": "Create a User variable"
     },
@@ -1485,13 +1503,240 @@
     },
     "Workdate variable": {
         "prefix": [
+            "var workdate",
+            "var WorkDate",
             "var Workdate",
+            "workdate",
+            "WorkDate",
             "Workdate"
         ],
         "body": [
-            "var Workdate $1 = $2;"
+            "var workdate $1 = $2;"
         ],
         "description": "Create a Workdate variable"
+    },
+    "Avg (RecordList records, Number fid)": {
+        "prefix": [
+            "Avg"
+        ],
+        "body": [
+            "Avg($1, $2)"
+        ],
+        "description": "Returns the average of the numeric values in field ID fid across the records returned by a formula query."
+    },
+    "API Query String": {
+        "prefix": [
+            "QBQuery",
+            "API Query"
+        ],
+        "body": [
+            "\"{'${1:6}'.${2|EX,CT,WC,HAS,XHAS,TV,XTV,XEX,SW,XSW,BF,OBF,AF,OAF,IR,XIR,LT,LTE,GT,GTE|}.'${3:value}'}${4:OR}{'${5:7}'.${6|EX,CT,WC,HAS,XHAS,TV,XTV,XEX,SW,XSW,BF,OBF,AF,OAF,IR,XIR,LT,LTE,GT,GTE|}.'${7:value}'}\""
+        ],
+        "description": "Create a Quickbase API query string."
+    },
+    "GetAccessKey ()": {
+        "prefix": [
+            "GetAccessKey"
+        ],
+        "body": [
+            "GetAccessKey()"
+        ],
+        "description": "Returns a secure access key for use in Quickbase secure-link formulas."
+    },
+    "GetFieldValues (RecordList records, Number fid)": {
+        "prefix": [
+            "GetFieldValues"
+        ],
+        "body": [
+            "GetFieldValues($1, $2)"
+        ],
+        "description": "Returns a list containing the values from field ID fid across the records in a record list."
+    },
+    "GetRecord (Number rid)": {
+        "prefix": [
+            "GetRecord"
+        ],
+        "body": [
+            "GetRecord($1)"
+        ],
+        "description": "Returns a record list containing the record with the specified record ID from the current table."
+    },
+    "GetRecord (Number rid, Table alias)": {
+        "prefix": [
+            "GetRecord"
+        ],
+        "body": [
+            "GetRecord($1, $2)"
+        ],
+        "description": "Returns a record list containing the record with the specified record ID from another table."
+    },
+    "GetRecordByUniqueField (Text value, Number unique fid)": {
+        "prefix": [
+            "GetRecordByUniqueField"
+        ],
+        "body": [
+            "GetRecordByUniqueField($1, $2)"
+        ],
+        "description": "Returns a record list containing the record whose unique field matches the supplied value."
+    },
+    "GetRecordByUniqueField (Text value, Number unique fid, Table alias)": {
+        "prefix": [
+            "GetRecordByUniqueField"
+        ],
+        "body": [
+            "GetRecordByUniqueField($1, $2, $3)"
+        ],
+        "description": "Returns a record list containing the record whose unique field matches the supplied value on another table."
+    },
+    "GetRecords (Text query)": {
+        "prefix": [
+            "GetRecords"
+        ],
+        "body": [
+            "GetRecords($1)"
+        ],
+        "description": "Returns a record list for the records in the current table that match a Quickbase query string."
+    },
+    "GetRecords (Text query, Table alias)": {
+        "prefix": [
+            "GetRecords"
+        ],
+        "body": [
+            "GetRecords($1, $2)"
+        ],
+        "description": "Returns a record list for the records in another table that match a Quickbase query string."
+    },
+    "HTMLToText (Text html)": {
+        "prefix": [
+            "HTMLToText"
+        ],
+        "body": [
+            "HTMLToText($1)"
+        ],
+        "description": "Converts HTML markup to plain text."
+    },
+    "Join (TextList values, Text delimiter)": {
+        "prefix": [
+            "Join"
+        ],
+        "body": [
+            "Join($1, $2)"
+        ],
+        "description": "Combines a text list into a single text value using the provided delimiter."
+    },
+    "Median (RecordList records, Number fid)": {
+        "prefix": [
+            "Median"
+        ],
+        "body": [
+            "Median($1, $2)"
+        ],
+        "description": "Returns the median numeric value in field ID fid across the records returned by a formula query."
+    },
+    "RecordList variable": {
+        "prefix": [
+            "var recordlist",
+            "var RecordList",
+            "recordlist",
+            "RecordList"
+        ],
+        "body": [
+            "var recordlist $1 = $2;"
+        ],
+        "description": "Create a RecordList variable"
+    },
+    "RegexExtract (Text input, Text pattern)": {
+        "prefix": [
+            "RegexExtract"
+        ],
+        "body": [
+            "RegexExtract($1, $2)"
+        ],
+        "description": "Returns the text that matches the supplied regular expression."
+    },
+    "RegexMatch (Text input, Text pattern)": {
+        "prefix": [
+            "RegexMatch"
+        ],
+        "body": [
+            "RegexMatch($1, $2)"
+        ],
+        "description": "Returns true if the input text matches the supplied regular expression."
+    },
+    "RegexReplace (Text input, Text pattern, Text replacement)": {
+        "prefix": [
+            "RegexReplace"
+        ],
+        "body": [
+            "RegexReplace($1, $2, $3)"
+        ],
+        "description": "Replaces text that matches the supplied regular expression."
+    },
+    "SHA256 (Text input)": {
+        "prefix": [
+            "SHA256"
+        ],
+        "body": [
+            "SHA256($1)"
+        ],
+        "description": "Returns the SHA-256 hash of the supplied text."
+    },
+    "Size (RecordList records)": {
+        "prefix": [
+            "Size"
+        ],
+        "body": [
+            "Size($1)"
+        ],
+        "description": "Returns the number of records in a record list."
+    },
+    "Size (TextList values)": {
+        "prefix": [
+            "Size"
+        ],
+        "body": [
+            "Size($1)"
+        ],
+        "description": "Returns the number of values in a multi-select text list."
+    },
+    "Size (UserList values)": {
+        "prefix": [
+            "Size"
+        ],
+        "body": [
+            "Size($1)"
+        ],
+        "description": "Returns the number of values in a user list."
+    },
+    "SumValues (RecordList records, Number fid)": {
+        "prefix": [
+            "SumValues"
+        ],
+        "body": [
+            "SumValues($1, $2)"
+        ],
+        "description": "Returns the sum of the numeric values in field ID fid across the records in a record list."
+    },
+    "TextList variable": {
+        "prefix": [
+            "var textlist",
+            "var TextList",
+            "textlist",
+            "TextList"
+        ],
+        "body": [
+            "var textlist $1 = $2;"
+        ],
+        "description": "Create a TextList variable"
+    },
+    "ToUnixTime (Date/Time value)": {
+        "prefix": [
+            "ToUnixTime"
+        ],
+        "body": [
+            "ToUnixTime($1)"
+        ],
+        "description": "Converts a date/time value to Unix time."
     },
     "WorkdayAdd (WorkDate d, Numeric n)": {
         "prefix": [
@@ -1501,6 +1746,96 @@
             "WorkdayAdd($1, $2)"
         ],
         "description": "Returns the date obtained by adding n days to the date d. The calculation includes the date d as one of the n days. For example, adding 2 days to 10/31/2003 which is a Friday will give you 11/01/2003 since it counts 10/31/2003 as 1 day and 11/01/2003 (a Saturday) as the second day."
+    },
+    "Average (RecordList records, Number fid)": {
+        "prefix": ["Average"],
+        "body": ["Average($1, $2)"],
+        "description": "Returns the average numeric value in field ID fid across a record list."
+    },
+    "Distance (Number lat1, Number lon1, Number lat2, Number lon2)": {
+        "prefix": ["Distance"],
+        "body": ["Distance($1, $2, $3, $4)"],
+        "description": "Returns the straight-line distance in miles between two decimal-degree coordinates."
+    },
+    "Distance (Number lat1, Number lon1, Number lat2, Number lon2, Text unit)": {
+        "prefix": ["Distance"],
+        "body": ["Distance($1, $2, $3, $4, \"${5|miles,km|}\")"],
+        "description": "Returns the straight-line distance between two decimal-degree coordinates in miles or km."
+    },
+    "Find (Text text, Text searchText)": {
+        "prefix": ["Find"],
+        "body": ["Find($1, $2)"],
+        "description": "Returns the first position of searchText in text, or zero if it does not occur."
+    },
+    "Max (RecordList records, Number fid)": {
+        "prefix": ["Max"],
+        "body": ["Max($1, $2)"],
+        "description": "Returns the maximum numeric value in field ID fid across a record list."
+    },
+    "Median (Number first, Number second, ...)": {
+        "prefix": ["Median"],
+        "body": ["Median($1, $2)"],
+        "description": "Returns the median of two or more numeric values. Null values are ignored."
+    },
+    "Median (Duration first, Duration second, ...)": {
+        "prefix": ["Median"],
+        "body": ["Median($1, $2)"],
+        "description": "Returns the median of two or more duration values. Null values are ignored."
+    },
+    "Min (RecordList records, Number fid)": {
+        "prefix": ["Min"],
+        "body": ["Min($1, $2)"],
+        "description": "Returns the minimum numeric value in field ID fid across a record list."
+    },
+    "NameOfMonth (Date value, Text format)": {
+        "prefix": ["NameOfMonth"],
+        "body": ["NameOfMonth($1, \"short\")"],
+        "description": "Returns the abbreviated name of the month for a date when format is short."
+    },
+    "NameOfMonth (Date/Time value, Text format)": {
+        "prefix": ["NameOfMonth"],
+        "body": ["NameOfMonth($1, \"short\")"],
+        "description": "Returns the abbreviated name of the month for a date/time when format is short."
+    },
+    "NameOfMonth (Number value, Text format)": {
+        "prefix": ["NameOfMonth"],
+        "body": ["NameOfMonth($1, \"short\")"],
+        "description": "Returns the abbreviated name of the numbered month when format is short."
+    },
+    "RemoveNewlineCharacters (Text text)": {
+        "prefix": ["RemoveNewlineCharacters"],
+        "body": ["RemoveNewlineCharacters($1)"],
+        "description": "Replaces each group of newline characters with a space."
+    },
+    "StDev (RecordList records, Number fid)": {
+        "prefix": ["StDev"],
+        "body": ["StDev($1, $2)"],
+        "description": "Returns the standard deviation of numeric values in field ID fid across a record list."
+    },
+    "ToDate (Number value)": {
+        "prefix": ["ToDate"],
+        "body": ["ToDate($1)"],
+        "description": "Converts Unix time in milliseconds to a date."
+    },
+    "ToDate (Text value, Text format)": {
+        "prefix": ["ToDate"],
+        "body": ["ToDate($1, $2)"],
+        "description": "Converts text to a date using the supplied date format."
+    },
+    "ToFormattedText (Number value, Text format, Number grouping)": {
+        "prefix": ["ToFormattedText"],
+        "body": ["ToFormattedText($1, $2, ${3|3,4|})"],
+        "description": "Formats a number with separators that start after three or four digits."
+    },
+    "ToUnixTime (Date value)": {
+        "prefix": ["ToUnixTime"],
+        "body": ["ToUnixTime($1)"],
+        "description": "Converts a date to Unix time."
+    },
+    "URLDecode (Text text)": {
+        "prefix": ["URLDecode"],
+        "body": ["URLDecode($1)"],
+        "description": "Decodes URL-encoded text."
     },
     "Year (Date d)": {
         "prefix": [

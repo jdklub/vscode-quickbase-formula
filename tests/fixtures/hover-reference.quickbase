@@ -1,0 +1,7 @@
+var Text query = "{6.EX.today}";
+var RecordList recs = GetRecords($query, [_DBID_PROJECTS]);
+var Bool hasMatch = RegexMatch("ABC", "[A-Z]+");
+Join(GetFieldValues($recs, 8), "; ")
+var Text todayquery = "{'13'.EX.'today'}";
+var Text futurequery = "{'13'.EX.'-1 days ago'}";
+var Text ownerquery = "{'20'.TV.'_curuser_'}";

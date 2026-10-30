@@ -3,10 +3,19 @@
 	"name": "Quickbase Formula",
 	"patterns": [
 		{
+			"include": "#comment"
+		},
+		{
 			"include": "#keyword"
 		},
 		{
 			"include": "#constant"
+		},
+		{
+			"include": "#numeric"
+		},
+		{
+			"include": "#apiQuery"
 		},
 		{
 			"include": "#strings"
@@ -22,65 +31,282 @@
 		},
 		{
 			"include": "#storage"
-		},
-		{
-			"include": "#comment"
 		}
 	],
 	"repository": {
+		"apiQuery": {
+			"patterns": [
+				{
+					"name": "meta.query.quickbase",
+					"begin": "\\{(?=\\s*(?:'[^']+'|\\d+)\\s*\\.)",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.control.block.quickbase.query"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "keyword.control.block.quickbase.query"
+						}
+					},
+					"patterns": [
+						{
+							"name": "variable.other.quickbase.query",
+							"match": "(?<=\\{\\s*)(?:'[^']+'|\\d+)(?=\\s*\\.)"
+						},
+						{
+							"name": "keyword.operator.comparison.quickbase.query",
+							"match": "(?<=\\.)\\b(?:CT|XCT|WC|HAS|XHAS|EX|TV|XTV|XEX|SW|XSW|BF|OBF|AF|OAF|IR|XIR|LT|LTE|GT|GTE)\\b(?=\\.)"
+						},
+						{
+							"name": "variable.other.quickbase.query",
+							"match": "\\{\\{[^{}]+\\}\\}"
+						},
+						{
+							"name": "constant.language.quickbase.query.special",
+							"match": "(?:(?<=\\.[A-Z]+\\.)'(?i:today|_curuser_|-?\\d+\\s+days\\s+ago)'(?=\\s*\\})|(?<=\\.(?:IR|XIR)\\.)'(?i:tomorrow|yesterday|(?:this|last|next)\\s+(?:wk|mon|q|fq|y|fy)|(?:last|next)\\s+\\d+\\s+(?:d|wk|mon|q|fq|y|fy))'(?=\\s*\\}))"
+						},
+						{
+							"name": "constant.language.quickbase.query.special",
+							"match": "(?<=\\.[A-Z]+\\.)(?i:today|_curuser_)(?=\\s*\\})"
+						},
+						{
+							"name": "constant.language.quickbase.query",
+							"match": "(?<=\\.[A-Z]+\\.)[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\})"
+						},
+						{
+							"name": "string.quoted.double.quickbase.query",
+							"begin": "\"",
+							"end": "\"",
+							"patterns": [
+								{
+									"name": "constant.character.escape.quickbase",
+									"match": "\\\\."
+								}
+							]
+						},
+						{
+							"name": "string.quoted.single.quickbase.query",
+							"begin": "'",
+							"end": "'",
+							"patterns": [
+								{
+									"name": "constant.character.escape.quickbase",
+									"match": "\\\\."
+								},
+								{
+									"name": "variable.other.quickbase.query",
+									"match": "\\{\\{[^{}]+\\}\\}"
+								}
+							]
+						},
+						{
+							"name": "constant.numeric.quickbase.query",
+							"match": "(?<=\\.[A-Z]+\\.)[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?=\\s*\\})"
+						},
+						{
+							"name": "punctuation.separator.dot.quickbase.query",
+							"match": "\\."
+						}
+					]
+				},
+				{
+					"name": "keyword.operator.comparison.quickbase.query",
+					"match": "(?<=\\.)\\b(?:CT|XCT|WC|HAS|XHAS|EX|TV|XTV|XEX|SW|XSW|BF|OBF|AF|OAF|IR|XIR|LT|LTE|GT|GTE)\\b(?=\\.)"
+				},
+				{
+					"name": "variable.other.quickbase.query",
+					"match": "\\{\\{[^{}]+\\}\\}"
+				},
+				{
+					"name": "keyword.control.quickbase.query",
+					"match": "\\b(?i:and|or)\\b"
+				},
+				{
+					"include": "#apiQueryGroup"
+				}
+			]
+		},
+		"apiQueryString": {
+			"patterns": [
+				{
+					"name": "meta.query.quickbase",
+					"begin": "\\{(?=\\s*(?:'[^']+'|\\d+)\\s*\\.[^\"\\r\\n]*\\})",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.control.block.quickbase.query"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "keyword.control.block.quickbase.query"
+						}
+					},
+					"patterns": [
+						{
+							"name": "variable.other.quickbase.query",
+							"match": "(?<=\\{\\s*)(?:'[^']+'|\\d+)(?=\\s*\\.)"
+						},
+						{
+							"name": "keyword.operator.comparison.quickbase.query",
+							"match": "(?<=\\.)\\b(?:CT|XCT|WC|HAS|XHAS|EX|TV|XTV|XEX|SW|XSW|BF|OBF|AF|OAF|IR|XIR|LT|LTE|GT|GTE)\\b(?=\\.)"
+						},
+						{
+							"name": "variable.other.quickbase.query",
+							"match": "\\{\\{[^{}]+\\}\\}"
+						},
+						{
+							"name": "constant.language.quickbase.query.special",
+							"match": "(?:(?<=\\.[A-Z]+\\.)'(?i:today|_curuser_|-?\\d+\\s+days\\s+ago)'(?=\\s*\\})|(?<=\\.(?:IR|XIR)\\.)'(?i:tomorrow|yesterday|(?:this|last|next)\\s+(?:wk|mon|q|fq|y|fy)|(?:last|next)\\s+\\d+\\s+(?:d|wk|mon|q|fq|y|fy))'(?=\\s*\\}))"
+						},
+						{
+							"name": "constant.language.quickbase.query.special",
+							"match": "(?<=\\.[A-Z]+\\.)(?i:today|_curuser_)(?=\\s*\\})"
+						},
+						{
+							"name": "constant.language.quickbase.query",
+							"match": "(?<=\\.[A-Z]+\\.)[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\})"
+						},
+						{
+							"name": "string.quoted.double.quickbase.query",
+							"begin": "\"",
+							"end": "\"",
+							"patterns": [
+								{
+									"name": "constant.character.escape.quickbase",
+									"match": "\\\\."
+								}
+							]
+						},
+						{
+							"name": "string.quoted.single.quickbase.query",
+							"begin": "'",
+							"end": "'",
+							"patterns": [
+								{
+									"name": "constant.character.escape.quickbase",
+									"match": "\\\\."
+								},
+								{
+									"name": "variable.other.quickbase.query",
+									"match": "\\{\\{[^{}]+\\}\\}"
+								}
+							]
+						},
+						{
+							"name": "constant.numeric.quickbase.query",
+							"match": "(?<=\\.[A-Z]+\\.)[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?=\\s*\\})"
+						},
+						{
+							"name": "punctuation.separator.dot.quickbase.query",
+							"match": "\\."
+						}
+					]
+				},
+				{
+					"name": "keyword.operator.comparison.quickbase.query",
+					"match": "(?<=\\.)\\b(?:CT|XCT|WC|HAS|XHAS|EX|TV|XTV|XEX|SW|XSW|BF|OBF|AF|OAF|IR|XIR|LT|LTE|GT|GTE)\\b(?=\\.)"
+				},
+				{
+					"name": "variable.other.quickbase.query",
+					"match": "\\{\\{[^{}]+\\}\\}"
+				},
+				{
+					"name": "keyword.control.quickbase.query",
+					"match": "\\b(?i:and|or)\\b"
+				},
+				{
+					"include": "#apiQueryStringGroup"
+				}
+			]
+		},
 		"comment": {
-			"patterns":[{
-				"name": "comment.line",
-				"match": "\\/{2}.*"
-			}]
+			"patterns": [
+				{
+					"name": "comment.line.quickbase",
+					"match": "\\/{2}.*"
+				}
+			]
 		},
 		"constant": {
-			"patterns": [{
-				"name": "constant.language.quickbase",
-				"match": "\\b(true|false|null)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "constant.language.quickbase",
+					"match": "\\b(?i:true|false|null)\\b"
+				}
+			]
 		},
 		"keyword": {
-			"patterns": [{
-				"name": "keyword.control.quickbase",
-				"match": "\\b(and|or|not)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.quickbase",
+					"match": "\\b(?i:and|or|not)\\b"
+				}
+			]
+		},
+		"numeric": {
+			"patterns": [
+				{
+					"name": "constant.numeric.quickbase",
+					"match": "\\b\\d+(?:\\.\\d+)?\\b"
+				}
+			]
 		},
 		"storage": {
-			"patterns": [{
-				"name": "storage.type.quickbase",
-				"match": "\\bvar\\b"
-			},
-			{
-				"name": "storage.modifier.quickbase",
-				"match": "\\b(Bool|Text|Number|Date|Datetime|Duration|Timeofday|Workdate|User)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.declaration.quickbase",
+					"match": "\\b(?i:var)\\b"
+				},
+				{
+					"name": "entity.name.type.quickbase",
+					"match": "\\b(?i:bool|number|text|textlist|date|datetime|duration|timeofday|workdate|user|recordlist)\\b"
+				}
+			]
 		},
 		"operator": {
-			"patterns": [{
-				"name": "keyword.operator.quickbase",
-				"match": "(\\+|-|\\*|(?<!\/)\/{1}(?!\/)(?!\/))|(>=|<=|>|<)"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.operator.quickbase",
+					"match": "(<>|!=|>=|<=|(?<!\\/)/(?!\\/)|\\^|\\*|\\+|-|&|=|>|<)"
+				}
+			]
 		},
 		"variable": {
-			"patterns": [{
-				"name": "variable.language.quickbase",
-				"match": "\\[[^\\[]+]"
-			},
-			{
-				"name": "variable.other.quickbase",
-				"match": "\\w([\\w_-]+)(?=\\s*(=)\\s*)"
-			},
-			{
-				"name": "variable.other.quickbase",
-				"match": "(\\$[\\w_-]+)"
-			}]
+			"patterns": [
+				{
+					"name": "variable.other.quickbase",
+					"match": "\\[[^\\]\\r\\n]+\\]"
+				},
+				{
+					"match": "\\b((?i:var))\\s+((?i:bool|number|text|textlist|date|datetime|duration|timeofday|workdate|user|recordlist))\\s+([A-Za-z][A-Za-z0-9_]*)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.control.declaration.quickbase"
+						},
+						"2": {
+							"name": "entity.name.type.quickbase"
+						},
+						"3": {
+							"name": "variable.other.quickbase"
+						}
+					}
+				},
+				{
+					"name": "variable.other.quickbase",
+					"match": "\\$[A-Za-z][A-Za-z0-9_]*\\b"
+				}
+			]
 		},
 		"support": {
-			"patterns": [{
-				"name": "support.function.quickbase",
-				"match": "\\b(Abs|AdjustMonth|AdjustYear|AppID|Average|Base64Decode|Base64Encode|Begins|Case|Ceil|Contains|Count|Date|Day|DayOfWeek|DayOfYear|Days|Dbid|Ends|Exp|FirstDayOfMonth|FirstDayOfPeriod|FirstDayOfWeek|FirstDayOfYear|Floor|Frac|GetFieldProperty|Hour|Hours|If|Includes|Int|IsLeapDay|IsLeapYear|IsNull|IsUserEmail|IsWeekday|LastDayOfMonth|LastDayOfPeriod|LastDayOfWeek|LastDayOfYear|Left|Length|List|Ln|Log|Lower|Max|Mid|Min|Minute|Minutes|Mod|Month|MSecond|MSeconds|NameOfMonth|NextDayOfWeek|NotLeft|NotRight|Now|Nz|PadLeft|PadRight|Part|PrevDayOfWeek|PV|QB32Decode|QB32Encode|Rem|Right|Round|SearchAndReplace|Second|Seconds|Split|Sqrt|Sum|ToBoolean|ToDate|Today|ToDays|ToFormattedText|ToHours|ToMinutes|ToMSeconds|ToNumber|ToSeconds|ToText|ToTimeOfDay|ToTimestamp|ToUser|ToUserList|ToWeekdayN|ToWeekdayP|ToWeeks|ToWorkDate|Trim|Upper|URLEncode|URLRoot|User|UserListToEmails|UserListToIds|UserListToNames|UserRoles|UserToEmail|UserToId|UserToName|WeekdayAdd|WeekdaySub|WeekOfYear|Weeks|WorkdayAdd|Year)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "support.function.quickbase",
+					"match": "\\b(?i:Abs|AdjustMonth|AdjustYear|AppID|Average|Avg|Base64Decode|Base64Encode|Begins|Case|Ceil|Contains|Count|Date|Day|DayOfWeek|DayOfYear|Days|Dbid|Distance|Ends|Exp|Find|FirstDayOfMonth|FirstDayOfPeriod|FirstDayOfWeek|FirstDayOfYear|Floor|Frac|GetAccessKey|GetFieldProperty|GetFieldValues|GetRecord|GetRecordByUniqueField|GetRecords|HTMLToText|Hour|Hours|If|Includes|Int|IsLeapDay|IsLeapYear|IsNull|IsUserEmail|IsWeekday|Join|LastDayOfMonth|LastDayOfPeriod|LastDayOfWeek|LastDayOfYear|Left|Length|List|Ln|Log|Lower|Max|Median|Mid|Min|Minute|Minutes|Mod|Month|MSecond|MSeconds|NameOfMonth|NextDayOfWeek|NotLeft|NotRight|Now|Nz|PadLeft|PadRight|Part|PrevDayOfWeek|PV|QB32Decode|QB32Encode|RegexExtract|RegexMatch|RegexReplace|Rem|RemoveNewlineCharacters|Right|Round|SearchAndReplace|Second|Seconds|SHA256|Size|Split|Sqrt|StDev|Sum|SumValues|ToBoolean|ToDate|Today|ToDays|ToFormattedText|ToHours|ToMinutes|ToMSeconds|ToNumber|ToSeconds|ToText|ToTimeOfDay|ToTimestamp|ToUnixTime|ToUser|ToUserList|ToWeekdayN|ToWeekdayP|ToWeeks|ToWorkDate|Trim|Upper|URLDecode|URLEncode|URLRoot|User|UserListToEmails|UserListToIds|UserListToNames|UserRoles|UserToEmail|UserToId|UserToName|WeekdayAdd|WeekdaySub|WeekOfYear|Weeks|WorkdayAdd|Year)\\b(?=\\s*\\()"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.quickbase",
@@ -88,8 +314,51 @@
 			"end": "\"",
 			"patterns": [
 				{
+					"include": "#apiQueryString"
+				},
+				{
 					"name": "constant.character.escape.quickbase",
 					"match": "\\\\."
+				}
+			]
+		},
+		"apiQueryGroup": {
+			"name": "meta.query.group.quickbase",
+			"begin": "\\((?=\\s*(?:\\(\\s*)*\\{\\s*(?:'[^']+'|\\d+)\\s*\\.)",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.section.group.begin.quickbase.query"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.section.group.end.quickbase.query"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#apiQuery"
+				}
+			]
+		},
+		"apiQueryStringGroup": {
+			"name": "meta.query.group.quickbase",
+			"begin": "\\((?=\\s*(?:\\(\\s*)*\\{\\s*(?:'[^']+'|\\d+)\\s*\\.)",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.section.group.begin.quickbase.query"
+				}
+			},
+			"end": "\\)|(?=\")",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.section.group.end.quickbase.query"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#apiQueryString"
 				}
 			]
 		}

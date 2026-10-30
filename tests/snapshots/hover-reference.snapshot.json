@@ -1,0 +1,491 @@
+[
+    {
+        "line":  1,
+        "text":  "var Text query = \"{6.EX.today}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  14,
+                             "text":  "query",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  15,
+                             "end":  16,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  17,
+                             "end":  31,
+                             "text":  "\"{6.EX.today}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  18,
+                            "end":  30,
+                            "text":  "{6.EX.today}",
+                            "tokens":  [
+                                           {
+                                               "start":  18,
+                                               "end":  19,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  19,
+                                               "end":  20,
+                                               "text":  "6",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  20,
+                                               "end":  21,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  21,
+                                               "end":  23,
+                                               "text":  "EX",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  23,
+                                               "end":  24,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  24,
+                                               "end":  29,
+                                               "text":  "today",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  29,
+                                               "end":  30,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    },
+    {
+        "line":  2,
+        "text":  "var RecordList recs = GetRecords($query, [_DBID_PROJECTS]);",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  14,
+                             "text":  "RecordList",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  15,
+                             "end":  19,
+                             "text":  "recs",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  20,
+                             "end":  21,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  22,
+                             "end":  32,
+                             "text":  "GetRecords",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  33,
+                             "end":  39,
+                             "text":  "$query",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  41,
+                             "end":  57,
+                             "text":  "[_DBID_PROJECTS]",
+                             "scope":  "variable.other.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    },
+    {
+        "line":  3,
+        "text":  "var Bool hasMatch = RegexMatch(\"ABC\", \"[A-Z]+\");",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Bool",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  17,
+                             "text":  "hasMatch",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  18,
+                             "end":  19,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  20,
+                             "end":  30,
+                             "text":  "RegexMatch",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  31,
+                             "end":  36,
+                             "text":  "\"ABC\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         },
+                         {
+                             "start":  38,
+                             "end":  46,
+                             "text":  "\"[A-Z]+\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    },
+    {
+        "line":  4,
+        "text":  "Join(GetFieldValues($recs, 8), \"; \")",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  4,
+                             "text":  "Join",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  5,
+                             "end":  19,
+                             "text":  "GetFieldValues",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  20,
+                             "end":  25,
+                             "text":  "$recs",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  27,
+                             "end":  28,
+                             "text":  "8",
+                             "scope":  "constant.numeric.quickbase"
+                         },
+                         {
+                             "start":  31,
+                             "end":  35,
+                             "text":  "\"; \"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    },
+    {
+        "line":  5,
+        "text":  "var Text todayquery = \"{\u002713\u0027.EX.\u0027today\u0027}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  19,
+                             "text":  "todayquery",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  20,
+                             "end":  21,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  22,
+                             "end":  41,
+                             "text":  "\"{\u002713\u0027.EX.\u0027today\u0027}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  23,
+                            "end":  40,
+                            "text":  "{\u002713\u0027.EX.\u0027today\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  23,
+                                               "end":  24,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  24,
+                                               "end":  28,
+                                               "text":  "\u002713\u0027",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  28,
+                                               "end":  29,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  29,
+                                               "end":  31,
+                                               "text":  "EX",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  31,
+                                               "end":  32,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  32,
+                                               "end":  39,
+                                               "text":  "\u0027today\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  39,
+                                               "end":  40,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    },
+    {
+        "line":  6,
+        "text":  "var Text futurequery = \"{\u002713\u0027.EX.\u0027-1 days ago\u0027}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  20,
+                             "text":  "futurequery",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  21,
+                             "end":  22,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  23,
+                             "end":  48,
+                             "text":  "\"{\u002713\u0027.EX.\u0027-1 days ago\u0027}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  24,
+                            "end":  47,
+                            "text":  "{\u002713\u0027.EX.\u0027-1 days ago\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  24,
+                                               "end":  25,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  25,
+                                               "end":  29,
+                                               "text":  "\u002713\u0027",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  29,
+                                               "end":  30,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  30,
+                                               "end":  32,
+                                               "text":  "EX",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  32,
+                                               "end":  33,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  33,
+                                               "end":  46,
+                                               "text":  "\u0027-1 days ago\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  46,
+                                               "end":  47,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    },
+    {
+        "line":  7,
+        "text":  "var Text ownerquery = \"{\u002720\u0027.TV.\u0027_curuser_\u0027}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  19,
+                             "text":  "ownerquery",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  20,
+                             "end":  21,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  22,
+                             "end":  45,
+                             "text":  "\"{\u002720\u0027.TV.\u0027_curuser_\u0027}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  23,
+                            "end":  44,
+                            "text":  "{\u002720\u0027.TV.\u0027_curuser_\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  23,
+                                               "end":  24,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  24,
+                                               "end":  28,
+                                               "text":  "\u002720\u0027",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  28,
+                                               "end":  29,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  29,
+                                               "end":  31,
+                                               "text":  "TV",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  31,
+                                               "end":  32,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  32,
+                                               "end":  43,
+                                               "text":  "\u0027_curuser_\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  43,
+                                               "end":  44,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    }
+]

@@ -1,0 +1,855 @@
+[
+    {
+        "line":  1,
+        "text":  "var Number miles = Distance(42.36, -71.06, 40.71, -74.01);",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  10,
+                             "text":  "Number",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  11,
+                             "end":  16,
+                             "text":  "miles",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  17,
+                             "end":  18,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  19,
+                             "end":  27,
+                             "text":  "Distance",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  28,
+                             "end":  33,
+                             "text":  "42.36",
+                             "scope":  "constant.numeric.quickbase"
+                         },
+                         {
+                             "start":  35,
+                             "end":  36,
+                             "text":  "-",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  36,
+                             "end":  41,
+                             "text":  "71.06",
+                             "scope":  "constant.numeric.quickbase"
+                         },
+                         {
+                             "start":  43,
+                             "end":  48,
+                             "text":  "40.71",
+                             "scope":  "constant.numeric.quickbase"
+                         },
+                         {
+                             "start":  50,
+                             "end":  51,
+                             "text":  "-",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  51,
+                             "end":  56,
+                             "text":  "74.01",
+                             "scope":  "constant.numeric.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    },
+    {
+        "line":  2,
+        "text":  "var Number position = Find(\"hello\", \"ello\");",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  10,
+                             "text":  "Number",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  11,
+                             "end":  19,
+                             "text":  "position",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  20,
+                             "end":  21,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  22,
+                             "end":  26,
+                             "text":  "Find",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  27,
+                             "end":  34,
+                             "text":  "\"hello\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         },
+                         {
+                             "start":  36,
+                             "end":  42,
+                             "text":  "\"ello\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    },
+    {
+        "line":  3,
+        "text":  "var Text clean = RemoveNewlineCharacters(\"line\");",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  14,
+                             "text":  "clean",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  15,
+                             "end":  16,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  17,
+                             "end":  40,
+                             "text":  "RemoveNewlineCharacters",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  41,
+                             "end":  47,
+                             "text":  "\"line\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    },
+    {
+        "line":  4,
+        "text":  "var Text decoded = URLDecode(\"hello%20world\");",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  16,
+                             "text":  "decoded",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  17,
+                             "end":  18,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  19,
+                             "end":  28,
+                             "text":  "URLDecode",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  29,
+                             "end":  44,
+                             "text":  "\"hello%20world\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    },
+    {
+        "line":  5,
+        "text":  "var Number deviation = StDev(GetRecords(\"{3.GT.0}\"), 12);",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  10,
+                             "text":  "Number",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  11,
+                             "end":  20,
+                             "text":  "deviation",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  21,
+                             "end":  22,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  23,
+                             "end":  28,
+                             "text":  "StDev",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  29,
+                             "end":  39,
+                             "text":  "GetRecords",
+                             "scope":  "support.function.quickbase"
+                         },
+                         {
+                             "start":  40,
+                             "end":  50,
+                             "text":  "\"{3.GT.0}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         },
+                         {
+                             "start":  53,
+                             "end":  55,
+                             "text":  "12",
+                             "scope":  "constant.numeric.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  41,
+                            "end":  49,
+                            "text":  "{3.GT.0}",
+                            "tokens":  [
+                                           {
+                                               "start":  41,
+                                               "end":  42,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  42,
+                                               "end":  43,
+                                               "text":  "3",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  43,
+                                               "end":  44,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  44,
+                                               "end":  46,
+                                               "text":  "GT",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  46,
+                                               "end":  47,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  47,
+                                               "end":  48,
+                                               "text":  "0",
+                                               "scope":  "constant.numeric.quickbase.query"
+                                           },
+                                           {
+                                               "start":  48,
+                                               "end":  49,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    },
+    {
+        "line":  6,
+        "text":  "var Text grouped = \"({6.EX.\u0027Open\u0027}OR{6.EX.\u0027Pending\u0027})AND{7.GTE.150}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  16,
+                             "text":  "grouped",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  17,
+                             "end":  18,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  19,
+                             "end":  68,
+                             "text":  "\"({6.EX.\u0027Open\u0027}OR{6.EX.\u0027Pending\u0027})AND{7.GTE.150}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  21,
+                            "end":  34,
+                            "text":  "{6.EX.\u0027Open\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  21,
+                                               "end":  22,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  22,
+                                               "end":  23,
+                                               "text":  "6",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  23,
+                                               "end":  24,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  24,
+                                               "end":  26,
+                                               "text":  "EX",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  26,
+                                               "end":  27,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  27,
+                                               "end":  33,
+                                               "text":  "\u0027Open\u0027",
+                                               "scope":  "string.quoted.single.quickbase.query"
+                                           },
+                                           {
+                                               "start":  33,
+                                               "end":  34,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  36,
+                            "end":  52,
+                            "text":  "{6.EX.\u0027Pending\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  36,
+                                               "end":  37,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  37,
+                                               "end":  38,
+                                               "text":  "6",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  38,
+                                               "end":  39,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  39,
+                                               "end":  41,
+                                               "text":  "EX",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  41,
+                                               "end":  42,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  42,
+                                               "end":  51,
+                                               "text":  "\u0027Pending\u0027",
+                                               "scope":  "string.quoted.single.quickbase.query"
+                                           },
+                                           {
+                                               "start":  51,
+                                               "end":  52,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  56,
+                            "end":  67,
+                            "text":  "{7.GTE.150}",
+                            "tokens":  [
+                                           {
+                                               "start":  56,
+                                               "end":  57,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  57,
+                                               "end":  58,
+                                               "text":  "7",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  58,
+                                               "end":  59,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  59,
+                                               "end":  62,
+                                               "text":  "GTE",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  62,
+                                               "end":  63,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  63,
+                                               "end":  66,
+                                               "text":  "150",
+                                               "scope":  "constant.numeric.quickbase.query"
+                                           },
+                                           {
+                                               "start":  66,
+                                               "end":  67,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    },
+    {
+        "line":  7,
+        "text":  "var Text dates = \"{7.IR.\u0027tomorrow\u0027}OR{7.IR.\u0027yesterday\u0027}OR{7.IR.\u0027this wk\u0027}OR{7.IR.\u0027last 5 d\u0027}OR{7.XIR.\u0027next 2 fq\u0027}OR{7.IR.\u0027this fy\u0027}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  14,
+                             "text":  "dates",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  15,
+                             "end":  16,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  17,
+                             "end":  132,
+                             "text":  "\"{7.IR.\u0027tomorrow\u0027}OR{7.IR.\u0027yesterday\u0027}OR{7.IR.\u0027this wk\u0027}OR{7.IR.\u0027last 5 d\u0027}OR{7.XIR.\u0027next 2 fq\u0027}OR{7.IR.\u0027this fy\u0027}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  18,
+                            "end":  35,
+                            "text":  "{7.IR.\u0027tomorrow\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  18,
+                                               "end":  19,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  19,
+                                               "end":  20,
+                                               "text":  "7",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  20,
+                                               "end":  21,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  21,
+                                               "end":  23,
+                                               "text":  "IR",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  23,
+                                               "end":  24,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  24,
+                                               "end":  34,
+                                               "text":  "\u0027tomorrow\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  34,
+                                               "end":  35,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  37,
+                            "end":  55,
+                            "text":  "{7.IR.\u0027yesterday\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  37,
+                                               "end":  38,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  38,
+                                               "end":  39,
+                                               "text":  "7",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  39,
+                                               "end":  40,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  40,
+                                               "end":  42,
+                                               "text":  "IR",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  42,
+                                               "end":  43,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  43,
+                                               "end":  54,
+                                               "text":  "\u0027yesterday\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  54,
+                                               "end":  55,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  57,
+                            "end":  73,
+                            "text":  "{7.IR.\u0027this wk\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  57,
+                                               "end":  58,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  58,
+                                               "end":  59,
+                                               "text":  "7",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  59,
+                                               "end":  60,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  60,
+                                               "end":  62,
+                                               "text":  "IR",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  62,
+                                               "end":  63,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  63,
+                                               "end":  72,
+                                               "text":  "\u0027this wk\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  72,
+                                               "end":  73,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  75,
+                            "end":  92,
+                            "text":  "{7.IR.\u0027last 5 d\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  75,
+                                               "end":  76,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  76,
+                                               "end":  77,
+                                               "text":  "7",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  77,
+                                               "end":  78,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  78,
+                                               "end":  80,
+                                               "text":  "IR",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  80,
+                                               "end":  81,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  81,
+                                               "end":  91,
+                                               "text":  "\u0027last 5 d\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  91,
+                                               "end":  92,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  94,
+                            "end":  113,
+                            "text":  "{7.XIR.\u0027next 2 fq\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  94,
+                                               "end":  95,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  95,
+                                               "end":  96,
+                                               "text":  "7",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  96,
+                                               "end":  97,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  97,
+                                               "end":  100,
+                                               "text":  "XIR",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  100,
+                                               "end":  101,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  101,
+                                               "end":  112,
+                                               "text":  "\u0027next 2 fq\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  112,
+                                               "end":  113,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  115,
+                            "end":  131,
+                            "text":  "{7.IR.\u0027this fy\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  115,
+                                               "end":  116,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  116,
+                                               "end":  117,
+                                               "text":  "7",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  117,
+                                               "end":  118,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  118,
+                                               "end":  120,
+                                               "text":  "IR",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  120,
+                                               "end":  121,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  121,
+                                               "end":  130,
+                                               "text":  "\u0027this fy\u0027",
+                                               "scope":  "constant.language.quickbase.query.special"
+                                           },
+                                           {
+                                               "start":  130,
+                                               "end":  131,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    },
+    {
+        "line":  8,
+        "text":  "$decoded",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  8,
+                             "text":  "$decoded",
+                             "scope":  "variable.other.quickbase"
+                         }
+                     ],
+        "queries":  [
+
+                    ]
+    }
+]

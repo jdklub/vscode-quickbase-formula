@@ -1,0 +1,231 @@
+[
+    {
+        "line":  1,
+        "text":  "var Text queryCERS = \"{\u00276\u0027.EX.\u00271\u0027}OR{\u00277\u0027.GT.\u00275\u0027}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  18,
+                             "text":  "queryCERS",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  19,
+                             "end":  20,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  21,
+                             "end":  49,
+                             "text":  "\"{\u00276\u0027.EX.\u00271\u0027}OR{\u00277\u0027.GT.\u00275\u0027}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  22,
+                            "end":  34,
+                            "text":  "{\u00276\u0027.EX.\u00271\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  22,
+                                               "end":  23,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  23,
+                                               "end":  26,
+                                               "text":  "\u00276\u0027",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  26,
+                                               "end":  27,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  27,
+                                               "end":  29,
+                                               "text":  "EX",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  29,
+                                               "end":  30,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  30,
+                                               "end":  33,
+                                               "text":  "\u00271\u0027",
+                                               "scope":  "string.quoted.single.quickbase.query"
+                                           },
+                                           {
+                                               "start":  33,
+                                               "end":  34,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        },
+                        {
+                            "start":  36,
+                            "end":  48,
+                            "text":  "{\u00277\u0027.GT.\u00275\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  36,
+                                               "end":  37,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  37,
+                                               "end":  40,
+                                               "text":  "\u00277\u0027",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  40,
+                                               "end":  41,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  41,
+                                               "end":  43,
+                                               "text":  "GT",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  43,
+                                               "end":  44,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  44,
+                                               "end":  47,
+                                               "text":  "\u00275\u0027",
+                                               "scope":  "string.quoted.single.quickbase.query"
+                                           },
+                                           {
+                                               "start":  47,
+                                               "end":  48,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    },
+    {
+        "line":  2,
+        "text":  "var Text queryByOwner = \"{\u00278\u0027.EX.\u0027{{ownerId}}\u0027}\";",
+        "topLevel":  [
+                         {
+                             "start":  0,
+                             "end":  3,
+                             "text":  "var",
+                             "scope":  "keyword.control.declaration.quickbase"
+                         },
+                         {
+                             "start":  4,
+                             "end":  8,
+                             "text":  "Text",
+                             "scope":  "entity.name.type.quickbase"
+                         },
+                         {
+                             "start":  9,
+                             "end":  21,
+                             "text":  "queryByOwner",
+                             "scope":  "variable.other.quickbase"
+                         },
+                         {
+                             "start":  22,
+                             "end":  23,
+                             "text":  "=",
+                             "scope":  "keyword.operator.quickbase"
+                         },
+                         {
+                             "start":  24,
+                             "end":  48,
+                             "text":  "\"{\u00278\u0027.EX.\u0027{{ownerId}}\u0027}\"",
+                             "scope":  "string.quoted.double.quickbase"
+                         }
+                     ],
+        "queries":  [
+                        {
+                            "start":  25,
+                            "end":  47,
+                            "text":  "{\u00278\u0027.EX.\u0027{{ownerId}}\u0027}",
+                            "tokens":  [
+                                           {
+                                               "start":  25,
+                                               "end":  26,
+                                               "text":  "{",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           },
+                                           {
+                                               "start":  26,
+                                               "end":  29,
+                                               "text":  "\u00278\u0027",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  29,
+                                               "end":  30,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  30,
+                                               "end":  32,
+                                               "text":  "EX",
+                                               "scope":  "keyword.operator.comparison.quickbase.query"
+                                           },
+                                           {
+                                               "start":  32,
+                                               "end":  33,
+                                               "text":  ".",
+                                               "scope":  "punctuation.separator.dot.quickbase.query"
+                                           },
+                                           {
+                                               "start":  33,
+                                               "end":  46,
+                                               "text":  "\u0027{{ownerId}}\u0027",
+                                               "scope":  "string.quoted.single.quickbase.query"
+                                           },
+                                           {
+                                               "start":  34,
+                                               "end":  45,
+                                               "text":  "{{ownerId}}",
+                                               "scope":  "variable.other.quickbase.query"
+                                           },
+                                           {
+                                               "start":  46,
+                                               "end":  47,
+                                               "text":  "}",
+                                               "scope":  "keyword.control.block.quickbase.query"
+                                           }
+                                       ]
+                        }
+                    ]
+    }
+]

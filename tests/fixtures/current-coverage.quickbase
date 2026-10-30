@@ -1,0 +1,8 @@
+var Number miles = Distance(42.36, -71.06, 40.71, -74.01);
+var Number position = Find("hello", "ello");
+var Text clean = RemoveNewlineCharacters("line");
+var Text decoded = URLDecode("hello%20world");
+var Number deviation = StDev(GetRecords("{3.GT.0}"), 12);
+var Text grouped = "({6.EX.'Open'}OR{6.EX.'Pending'})AND{7.GTE.150}";
+var Text dates = "{7.IR.'tomorrow'}OR{7.IR.'yesterday'}OR{7.IR.'this wk'}OR{7.IR.'last 5 d'}OR{7.XIR.'next 2 fq'}OR{7.IR.'this fy'}";
+$decoded

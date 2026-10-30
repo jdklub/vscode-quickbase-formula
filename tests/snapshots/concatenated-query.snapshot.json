@@ -1,0 +1,75 @@
+{
+    "line":  1,
+    "text":  "var RecordList ownerProjects = GetRecords(\"{6.EX.\u0027\" \u0026 [Manager] \u0026 \"\u0027}\", [_DBID_PROJECTS]);",
+    "topLevel":  [
+                     {
+                         "start":  0,
+                         "end":  3,
+                         "text":  "var",
+                         "scope":  "keyword.control.declaration.quickbase"
+                     },
+                     {
+                         "start":  4,
+                         "end":  14,
+                         "text":  "RecordList",
+                         "scope":  "entity.name.type.quickbase"
+                     },
+                     {
+                         "start":  15,
+                         "end":  28,
+                         "text":  "ownerProjects",
+                         "scope":  "variable.other.quickbase"
+                     },
+                     {
+                         "start":  29,
+                         "end":  30,
+                         "text":  "=",
+                         "scope":  "keyword.operator.quickbase"
+                     },
+                     {
+                         "start":  31,
+                         "end":  41,
+                         "text":  "GetRecords",
+                         "scope":  "support.function.quickbase"
+                     },
+                     {
+                         "start":  42,
+                         "end":  51,
+                         "text":  "\"{6.EX.\u0027\"",
+                         "scope":  "string.quoted.double.quickbase"
+                     },
+                     {
+                         "start":  52,
+                         "end":  53,
+                         "text":  "\u0026",
+                         "scope":  "keyword.operator.quickbase"
+                     },
+                     {
+                         "start":  54,
+                         "end":  63,
+                         "text":  "[Manager]",
+                         "scope":  "variable.other.quickbase"
+                     },
+                     {
+                         "start":  64,
+                         "end":  65,
+                         "text":  "\u0026",
+                         "scope":  "keyword.operator.quickbase"
+                     },
+                     {
+                         "start":  66,
+                         "end":  70,
+                         "text":  "\"\u0027}\"",
+                         "scope":  "string.quoted.double.quickbase"
+                     },
+                     {
+                         "start":  72,
+                         "end":  88,
+                         "text":  "[_DBID_PROJECTS]",
+                         "scope":  "variable.other.quickbase"
+                     }
+                 ],
+    "queries":  [
+
+                ]
+}

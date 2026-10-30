@@ -1,0 +1,8 @@
+var Text ownerSummary = Join("A", 5);
+var Number ownerCount = Join(List(", ", "A", "B"), ", ");
+var Text query = "{'6'.BAD.'1'}";
+var Number query = 7;
+var Text ownerName = $missingOwner;
+var Text query1 = "{6.ex.'1'}";
+var Text pattern = "[A-Z]+";
+var Bool hasOwnerCode = RegexMatch("ABC", $pattern);

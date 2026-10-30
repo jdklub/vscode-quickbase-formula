@@ -1,0 +1,1 @@
+var Bool isActive = [Status] = "Active" and not IsNull([Assigned To]);

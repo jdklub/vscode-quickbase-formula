@@ -1,0 +1,3 @@
+var Text brokenQuery = "{'6'.EX.'1'";
+var Text brokenCall = Join(List(", ", "A", "B"), "; ";
+var Bool badLogic = not "yes";

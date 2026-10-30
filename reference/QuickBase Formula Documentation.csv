@@ -1,0 +1,476 @@
+Category,Function Name,Arguments,Result Type,Explanation,Examples
+Binary Operators (act on multiple values),!=,"<any> x, <any> y",Boolean,"Same as <>. Returns true if x is not equal to y, otherwise returns false. x and y must be the same type. As with most other functions, null argument values produce a null result, so it is not possible to test for null with this operator. To test for null, use IsNull() instead.",(3 / 4 <> 0.75) returns false
+Binary Operators (act on multiple values),&,"<any> u, <any> v",Text,"Returns a text value that is the concatenation of u and v. Use this operator to link strings of characters together in a formula text field. If u or v is not a text value, QuickBase automatically inserts the function ToText() to convert the value to text before concatenating it. Does not support User or UserList.","""abc"" & ""def"" returns ""abcdef"""
+,,,,,"""abc"" & 5 returns ""abc5"""
+,,,,,"[First Name] & "" "" & [Last Name] concatenates the values in the First Name and Last Name field with a space in between them."
+Binary Operators (act on multiple values),*,"Number m, Number n",Number,Returns the product of m times n.,[Price] * [Number of Units] multiplies the value in the Price field by the value in the Number of units field.
+,,,,,-3 * 4 returns -12
+,,,,,0.5 * 5 returns 2.5
+Binary Operators (act on multiple values),*,"Number n, Duration d",Duration,"Returns a new Duration that is the given Duration d repeated n times. In other words, it's the duration multiplied by the number n.",3 * Days(2) returns 6 days
+Binary Operators (act on multiple values),*,"Duration d, Number n",Duration,"Returns a new Duration that is the given Duration d repeated n times. In other words, it's the duration multiplied by the number n.",Weeks(2) * 3 returns 6 weeks
+Unary Operators (act on single values),+,Number n,Number,Returns n. A +plus sign in front of a number returns a positive number.,+5 returns 5
+,,,,,+-5 returns -5
+Unary Operators (act on single values),+,Duration d,Duration,Returns d. A +plus sign in front of a duration returns a positive duration.,+ Weeks(3) returns 3 weeks
+Binary Operators (act on multiple values),+,"Number m, Number n",Number,Returns the sum of m and n.,3 + 4 returns 7
+,,,,,[Subtotal] + [Tax] returns the sum achieved by adding the value in the Subtotal field to the value in the Tax field.
+Binary Operators (act on multiple values),+,"Duration x, Duration y",Duration,Returns the duration that is the sum of x and y.,Days(1) + Days(2) returns 3 days
+Binary Operators (act on multiple values),+,"Date d, Duration x",Date,Returns the date that is after date d by the duration x. x is truncated to a whole number of days.,[Start Date] + [Duration] returns the date you get by adding the value in the Duration field to the date in the Start Date field.
+,,,,,"ToDate(""Jan 1, 2000"") + Days(2) returns Jan 3, 2000"
+Binary Operators (act on multiple values),+,"Duration x, Date d",Date,Returns the date that is after date d by the duration x. x is truncated to a whole number of days.,"Days(2) + ToDate(""Jan 1, 2000"") returns Jan 3, 2000"
+Binary Operators (act on multiple values),+,"Date/Time t, Duration x",Date/Time,Returns the Date/Time that is after Date/Time t by the duration x.,[Call Time] + [Review Period] returns the date and time that follows the date/time in the Call Time field by the duration listed in the Review Period field.
+Binary Operators (act on multiple values),+,"Duration x, Date/Time t",Date/Time,Returns the Date/Time that is after Date/Time t by the duration x.,[Hours Worked] + [Start Time] returns the time of day resulting from adding the value in the Hours Worked field to the time in the Start Time field.
+Binary Operators (act on multiple values),+,"Duration d, TimeOfDay t",TimeOfDay,Returns the TimeOfDay that is after TimeOfDay t by the duration x.,"ToTimeOfDay(""2 pm"") + Hours(22) returns 12 pm"
+Binary Operators (act on multiple values),+,"TimeOfDay t, Duration d",TimeOfDay,Returns the TimeOfDay that is after TimeOfDay t by the duration x.,[Start Time] + [Hours Worked] returns the time of day resulting from adding the value in the Hours Worked field to the time in the Start Time field.
+Unary Operators (act on single values),-,Number n,Number,Returns the arithmetic negative of n.,-5 returns -5
+,,,,,--5 returns 5
+Unary Operators (act on single values),-,Duration d,Duration,Returns the arithmetic negative of d.,-Weeks(3) returns -3 weeks
+,,,,,-Weeks(-3) returns 3 weeks
+Binary Operators (act on multiple values),-,"Number m, Number n",Number,Returns the difference of m and n.,7 - 3 returns 4
+,,,,,-7 - 2 returns -9
+Binary Operators (act on multiple values),-,"Duration x, Duration y",Duration,Returns the difference of x and y.,Weeks(1) - Days(2) returns 5 days
+,,,,,Days(1) - Weeks(1) returns -6 days
+Binary Operators (act on multiple values),-,"Date d, Duration x",Date,Returns the date that is before date d by the duration x. x is truncated to a whole number of days.,[Finish] - [Duration] returns the date you get by subracting the value in the Duration field from the date in the Finish field.
+,,,,,
+,,,,,"ToDate(""Jan 3, 2000"") - Days(2) returns Jan 1, 2000"
+Binary Operators (act on multiple values),-,"Date d, Date e",Duration,Returns the duration between dates d and e.,[Actual Date Completed] - [Forecast Date] returns the duration between the date in the Actual Date Completed field and the one in the Forecast Date field.
+,,,,,
+,,,,,"ToDate(""Jan 3, 2000"") - ToDate(""Jan 1, 2000"")  returns 2 days"
+Binary Operators (act on multiple values),-,"Date/Time t, Duration x",Date/Time,Returns the Date/Time that is before Date/Time t by the duration x.,[Event Start] - [Days to Prepare] returns the Date and time that precedes the event start by the number of days in the Days to Prepare field.
+Binary Operators (act on multiple values),-,"Date/Time t, Date/Time u",Duration,Returns the duration between Date/Time values t and u.,[Created] - [Time/Date Resolved]
+Binary Operators (act on multiple values),-,"TimeOfDay t, Duration d",TimeOfDay,Returns the TimeOfDay that is before TimeOfDay t by the duration d.,[Meeting Start] - [Hours of Prep] returns the time that precedes the Meeting Start time by the number of hours listed in the Hours of Prep field.
+Binary Operators (act on multiple values),-,"TimeOfDay t, TimeOfDay u",Duration,Returns the duration between TimeOfDay t and TimeOfDay u. The result may be positive or negative depending on whether t is after or before u.,[End] - [Start] returns the duration you get by subtracting the time value in the Start field from the value in the End field.
+,,,,,"ToTimeOfDay(""3pm"") - ToTimeOfDay(""2pm"") returns 1 hour"
+,,,,,"ToTimeOfDay(""2pm"") - ToTimeOfDay(""3pm"") returns -1 hour"
+Binary Operators (act on multiple values),/,"Number m, Number n",Number,Returns m divided by n.,6 / 4 returns 1.5
+Binary Operators (act on multiple values),/,"Duration x, Duration y",Number,Returns the number of times that Duration y divides into x.,Weeks(1) / Days(1) returns 7
+Binary Operators (act on multiple values),/,"Duration x, Number n",Duration,Returns a new Duration that is x divided by n.,Weeks(2) / 2 returns 1 week
+Binary Operators (act on multiple values),<,"<any> x, <any> y",Boolean,"Returns true if x is less than y, otherwise returns false. x and y must be the same type. For Numbers, the comparison is numerical. For Durations, the comparison is done using length of time represented. For Text, the comparison is done by alphabetical sort order. For Dates, Date/Time, and Time of Day values, the comparison is done by chronological order. For Booleans, false is less than true.",3 < 4 returns true
+,,,,,4 < 3 returns false
+,,,,,"""abcdef"" < ""gh"" returns true"
+Binary Operators (act on multiple values),<=,"<any> x, <any> y",Boolean,"Returns true if x is less than or equal to y, otherwise returns false. x and y must be the same type. For Numbers, the comparison is numerical. For Durations, the comparison is done using length of time represented. For Text, the comparison is done by alphabetical sort order. For Dates, Date/Time, and Time of Day values, the comparison is done by chronological order. For Booleans, false is less than true.",3 <= 4 returns true
+,,,,,"""abcdef"" <= ""gh"" returns true"
+Binary Operators (act on multiple values),<>,"<any> x, <any> y",Boolean,"Same as !=. Returns true if x is not equal to y, otherwise returns false. x and y must be the same type. As with most other functions, null argument values produce a null result, so it is not possible to test for null with this operator. To test for null, use IsNull() instead.",(3 / 4 <> 0.75) returns false
+Binary Operators (act on multiple values),=,"<any> x, <any> y",Boolean,"Returns true if x is equal to y, otherwise returns false. x and y must be the same type. As with most other functions, null argument values produce a null result, so it is not possible to test for null with this operator. To test for null, use IsNull() instead.",(3 / 4 = 0.75) returns true
+Binary Operators (act on multiple values),>,"<any> x, <any> y",Boolean,"Returns true if x is greater than y, otherwise returns false. x and y must be the same type. For Numbers, the comparison is numerical. For Durations, the comparison is done using length of time represented. For Text, the comparison is done by alphabetical sort order. For Dates, Date/Time, and Time of Day values, the comparison is done by chronological order. For Booleans, false is less than true.",3 > 4 returns false
+,,,,,
+,,,,,[Actual Completion Date] >= [Projected Completion Date] returns true if the value in the the Actual Completion Date field is greater than the date in the Project Completion Date field.
+,,,,,
+,,,,,Weeks(1) > Days(6) returns true
+Binary Operators (act on multiple values),>=,"<any> x, <any> y",Boolean,"Returns true if x is greater than or equal to y, otherwise returns false. x and y must be the same type. For Numbers, the comparison is numerical. For Durations, the comparison is done using length of time represented. For Text, the comparison is done by alphabetical sort order. For Dates, Date/Time, and Time of Day values, the comparison is done by chronological order. For Booleans, false is less than true.",[Actual Completion Date] >= [Projected Completion Date] returns true if the value in the the Actual Completion Date field is greater than or equal to the date in the Project Completion Date field.
+,,,,,
+,,,,,"ToDate(""Jan 1, 2000"") >= ToDate(""Feb 1, 1999"") returns true"
+Binary Operators (act on multiple values),^,"Number m, Number n",Number,Returns m raised to the nth power.,2 ^ 3 returns 8
+,,,,,9 ^ 0.5 returns 3
+,,,,,2 ^ -3 returns 0.125
+Numbers,Abs,(Number n),Number,Returns the absolute value of the Number n.,Abs(3.5) returns 3.5
+,,,,,Abs(-3.5) returns 3.5
+Durations,Abs,(Duration d),Duration,Returns the absolute value of d.,Abs(Weeks(3.5)) returns 3.5 weeks
+,,,,,Abs(Weeks(-3.5)) returns 3.5 weeks
+Dates,AdjustMonth,"(Date d, Number m)",Date,"Returns the date which is m months after the given date d, with the same day number. If the day doesn't exist in that month, the last day of that month is returned.","AdjustMonth([Ordered On], 3) returns the date three months after the date in the Ordered On field."
+,,,,,
+,,,,,"AdjustMonth(ToDate(""2/20/99""), 2) returns April 20, 1999"
+,,,,,"AdjustMonth(ToDate(""4/29/99""), -2) returns February 28, 1999"
+Dates,AdjustYear,"(Date d, Number y)",Date,"Returns the date which is y years after the given date d, with the same month and day. If the day doesn't exist in that month, the last day of that month is returned.","AdjustYear([Last Appt], 1) returns the date one year after the date in the Last Appt field."
+,,,,,"AdjustYear([Date],-1) returns the date one year before the value in the Date field,"
+,,,,,"AdjustYear(ToDate(""2/20/99""), 2) returns February 20, 2001"
+,,,,,"AdjustYear(ToDate(""2/29/00""), -1) returns February 28, 1999"
+Binary Operators (act on multiple values),and,"Boolean a, Boolean b",Boolean,"Returns true if a and b are both true, otherwise returns false. Use this operator to link conditions together.",(true and false) returns false
+,,,,,
+,,,,,"[Decision - Technical Lead]=""Approved"" and"
+,,,,,"[Decision - Project Manager]=""Approved"" and "
+,,,,,"[Decision - Project Sponsor]=""Approved"" "
+,,,,,"returns true if all three fields contain the value ""approved"""
+Special,AppID,(),Text,Returns a text value containing the database ID of the app.,"AppID() in this app returns ""6ewwzuuj"""
+Aggregation,Average,"(Number n, ...)",Number,Returns the average of all the arguments (except any null values).,"Average(12, 6, null) returns 9"
+,,,,,
+Aggregation,Average,"(Duration d, ...)",Duration,Returns the average of all the arguments (except any null values).,"Average(Days(1), Days(3)) returns 2 days"
+Aggregation,Average,"(Date d, ...)",Date,Returns the average of all the arguments (except any null values).,"Average(ToDate(""1/1/2000""), ToDate(""1/3/2000"")) returns the date 1/2/2000"
+Aggregation,Average,"(Date/Time t, ...)",Date/Time,Returns the average of all the arguments (except any null values).,"average([Actual Finish], [Planned Finish])"
+Aggregation,Average,"(TimeOfDay t, ...)",TimeOfDay,Returns the average of all the arguments (except any null values).,"Average([Mon Start Time], [Tues Start Time], [Wed Start Time]) returns the average of all three start times."
+Encoding Functions,Base64Decode,(Text t),Text,Decodes text using base64 encoding.,"Base64Decode(""aGVsbG8gd29ybGQ="") returns ""hello world"""
+Encoding Functions,Base64Encode,(Text t),Text,Encodes text using base64 encoding.,"Base64Encode(""hello world"") returns ""aGVsbG8gd29ybGQ="""
+Text,Begins,"(Text u, Text v)",Boolean,"Returns true if the text u begins with the text v, otherwise returns false.","Begins(""abcdef"", ""cd"") returns false"
+,,,,,"Begins(""abcdef"", ""abcd"") returns true"
+Special,Case,"(<any> x, <any> val1, <any> result1, ..., <any> else-result)",<same type as result1>,"Case() is a variation of the If() function. If you want to test many conditions against a single field, use the Case() function instead of the If() function. QuickBase evaluates the value x and compares it to each of the values that follow (val1 and so on) sequentially. If the value X matches any value, QuickBase returns the corresponding result which lives behind the comma following the matched value. If value x is not equal to any of the values, QuickBase returns the else-result at the end of the formula. The else-result is optional. If omitted, QuickBase assumes it's null (empty). The value x may be of any data type, but all of the values must be of the same type as x.","Case([Grade], ""A"", 100, ""B"", 90, null)"
+,,,,,
+,,,,,"This formula says: If the value in the Grade field is A, then return 100. If the value in the Grade field is B, then return 90. Otherwise, return nothing (null)."
+,,,,,
+Rounding and Truncating,Ceil,(Number x),Number,Returns the smallest integer greater than or equal to the number x.,Ceil(3) returns 3
+,,,,,Ceil(3.4) returns 4
+,,,,,Ceil(-3.4) returns -3
+Rounding and Truncating,Ceil,"(Number x, Number y)",Number,Returns the smallest multiple of y which is greater than or equal to x.,"Ceil(3.5, 2) returns 4"
+,,,,,"Ceil(-3.5, 2) returns -2"
+Rounding and Truncating,Ceil,"(Duration x, Duration y)",Duration,Returns the smallest multiple of the duration y which is greater than or equal to the duration x.,"Ceil(Days(3.5), Days(2)) returns Days(4)"
+Text,Contains,"(Text u, Text v)",Boolean,"Returns true if v is contained in u, otherwise returns false.","Contains(""abcdef"", ""cd"") returns true"
+,,,,,"Contains([Status], ""open"") returns true if the Status field contains the word ""open"""
+TextList,Contains,"(TextList textList, Text textToSearchFor)",Boolean,"Returns true if textToSearchFor is contained in textList, otherwise returns false. Comparison is not case sensitive.","Contains([Skills Required], ""Kung fu"") returns true if the ""Skills required"" field has as one of its selected options ""Kung fu"""
+UserList,Contains,"Contains (UserList userList, User userToSearchFor)",Boolean,"Returns true if userToSearchFor is contained in userList, otherwise returns false.","Contains([Team members], [Assigned To]) returns true if the value of the ""Assigned To"" field appears in the ""Team members"" list"
+Aggregation,Count,"(<any> x, ...)",Number,"Counts the number of non-null arguments. For Text arguments, non-blanks are counted. For Boolean arguments, trues are counted. This function can also be used in the context of a Summary report where it will count the # of Non-null records for each grouping, if used to specify the field to check in a Calculated Column.","Count ("""", ""abc"", true, false, 53) returns 3"
+,,,,,
+,,,,,"For the Summary Report example, a formula might look something like this:"
+,,,,,
+,,,,,Count([Field])
+,,,,,
+,,,,,This might be used if the customer were trying to determine - within the Summary Report groups - how many of these records had a value in [Field]
+Dates,Date,"(Number year, Number month, Number day)",Date,"Creates a date from a year, month and day.","Date(2000, 1, 10) returns the date January 10, 2000"
+Dates,Day,(Date d),Number,Returns the day of the month of the given Date d.,Day([Start Date]) returns the day of the month for the date that appears in the Start Date field.
+,,,,,
+,,,,,"Day(ToDate(""Jan 10, 2000"")) returns 10"
+Dates,DayOfWeek,(Date d),Number,Returns the number of days by which the given date d follows the first day of the week (Sunday returns 0).,DayOfWeek([Start Date]) returns the number of the day of the week for the date that appears in the Start Date field.
+,,,,,"DayOfWeek(ToDate(""Aug 23, 2000"")) returns 3"
+,,,,,"DayOfWeek(ToDate(""Aug 20, 2000"")) returns 0"
+Dates,DayOfYear,(Date d),Number,Returns the number of days by which the given date d follows the first day of the year (January 1 returns 0).,"DayOfYear(ToDate(""Jan 1, 2000"")) returns 0"
+,,,,,"DayOfYear(ToDate(""Jan 10, 2000"")) returns 9"
+Durations,Days,(Number n),Duration,"Returns a Duration representing n days. This function takes a number and converts it into a Duration type value, expressed in days.",Days(1.5) returns a 1.5 day duration
+,,,,,"Days([Estimated # of days]) converts the numeric value in the Estimated # of days field into a duration expressed in days. The number doesn't change, just the data type."
+Special,Dbid,(),Text,Returns a Text value containing the database ID of a table.,"Dbid() in this database returns ""6ewwzuuj"""
+Text,Ends,"(Text u, Text v)",Boolean,"Returns true if the text u ends with the text v, otherwise returns false.","Ends(""abcdef"", ""cd"") returns false"
+,,,,,"Ends(""abcdef"", ""cdef"") returns true"
+Numbers,Exp,(Number n),Number,"Returns e raised to the nth power, where e is approximately 2.71828182845905 This exponential function is for use in logarithmic calculations that track growth. For example, you can use it to figure compounding interest.","Exp(2) returns 7.389056 (which is e, or 2.71828182845905, to the 2nd power)"
+,,,,,
+,,,,,Exp(5) returns 148.413159 (e to the 5th power)
+Text,Find,"(Text str, Text searchString)",Numeric,"Returns the index where searchString starts to appear in str. If not found, returns 0.","Example: Find(""Hello World"", ""Wo"") returns 7"
+,,,,,"Find(""Hello World"", ""H"") returns 1"
+,,,,,"Find(""Hello World"", ""X"") returns 0"
+Dates,FirstDayOfMonth,(Date d),Date,Returns the first day of the month in which the date falls.,FirstDayOfMonth([Order Date]) returns the first day of the month in which the Order Date occurs.
+,,,,,
+,,,,,FirstDayOfMonth(Today()) returns the first day of the current month.
+Dates,FirstDayOfPeriod,"(Date d, Duration p, Date r)",Date,"Returns the first day of the period in which the date d falls. The cycle of periods is defined by the given Duration p, repeated in sequence starting at the given reference date r. If the period p is not a whole number of days, the fractional part is ignored.",Useful for handling biweekly pay periods.
+,,,,,
+,,,,,"FirstDayOfPeriod([date field], Weeks(2), Date(2000,5,1)) returns the date that is the start of the two week period in which the date in the date field falls. The initial two week period that starts the cycle begins on May 1, 2000."
+,,,,,
+,,,,,
+,,,,,"FirstDayOfPeriod(Today(), Days(365), Date(2005,7,1)) returns the date July 1st of the current year-long period. Between 7/1/06 and 7/1/07 this would be July 1, 2006. (As the years go on, this method won't account for leap years.)"
+Dates,FirstDayOfWeek,(Date d),Date,Returns the first day (Sunday) of the week in which the date falls.,FirstDayOfWeek([Start Date]) returns the date of the Sunday (first day of the week) in which the Start Date occurs.
+,,,,,"FirstDayOfWeek(ToDate(""7/30/2007"")) returns the date 7-29-07"
+Dates,FirstDayOfYear,(Date d),Date,Returns the first day of the year in which the date falls.,FirstDayOfYear([Termination Date]) returns the first day of the year in which the Termination date occurs.
+,,,,,
+,,,,,FirstDayOfYear(Today()) returns the first day of the current year.
+Rounding and Truncating,Floor,(Number x),Number,"Returns the largest integer less than or equal to the number x. Note that if x is a negative fraction, the result is closer to negative infinity than x is (compare to function Int).",Floor(3) returns 3
+,,,,,Floor(3.4) returns 3
+,,,,,Floor (3.8) returns 3
+,,,,,Floor(-3.4) returns -4
+Rounding and Truncating,Floor,"(Number x, Number y)",Number,Returns the largest multiple of y which is less than or equal to x.,"Floor(3.5, 2) returns 2"
+,,,,,"Floor(-3.5, 2) returns -4"
+Rounding and Truncating,Floor,"(Duration x, Duration y)",Duration,Returns the largest multiple of the duration y which is less than or equal to the duration x.,"Floor(Days(3.5), Days(2)) returns Days(2)"
+Numbers,Frac,(Number n),Number,"Returns the fractional part of the Number n. The result is the same sign as n. For any Number n, Int(n) + Frac(n) is the same as n.",Frac(3.4) returns 0.4
+,,,,,Frac(-2.3) returns -0.3
+Special,GetFieldProperty,"(Number fid, Text prop)","<Boolean, Text, or Number>","Returns the value of the field property prop, in the field fid, in the current table.  The properties currently supported are ""currencyFormat"", ""currencySymbol"", ""fieldType"", ""maxLength"", ""required"", and ""unique"".","GetFieldProperty(15,""required"") returns true if field 15 in the current table is required, false if not."
+Queries,GetFieldValues,"(RecordList l, Number f)",Text Collection,Returns values of fields with field id f from records in l. Use in Formula- Multi-select Text field.,"GetFieldValues(GetRecord(1), 3), returns [“1”]."
+Queries,GetRecord,(Number r),Record Collection,Returns record with record id r from the current table. Use this formula to obtain a record list for GetFieldValues.,"GetRecord(1) returns a list of records, in this case containing a single record with Record ID# 1."
+Queries,GetRecord,"(Number r, Text t)",Record Collection,Returns record with record id r from table with dbid t. Use this formula to obtain a record list for GetFieldValues.,"GetRecord (1, “bck7gp3q2”) returns record with Record ID# 1 from table with dbid “bck7gp3q2”."
+Queries,GetRecords,(Text q),Record Collection,Returns records matching the criteria set by query q from current table. Use this formula to obtain record list for GetFieldValues.,GetRecords (“{3.GT.0}”) returns all records in current table for which the field with id 3 has value greater than 0.
+,,,,,
+,,,,Note that queries within this formula use API query syntax.,
+Queries,GetRecords,"(Text q, Text t)",Record Collection,Returns records matching the criteria set by query q from table with dbid t. Use this formula to obtain record list for GetFieldValues.,"GetRecords(""{3.GT.0}"", ""bck7gp3q2"") returns all records from table with dbid “bck7gp3q2” for which the field with id 3 has value greater than 0."
+,,,,,
+,,,,Note that queries within this formula use API query syntax.,
+,,,,,
+TimeOfDay,Hour,(TimeOfDay t),Number,Returns the hour part of the argument t. The hour is in the range 0 to 23.,"Hour(ToTimeOfDay(""3:04pm"")) returns 15"
+Durations,Hours,(Number n),Duration,"Returns a Duration representing n hours. This function takes a number and converts it into a Duration type value, expressed in hours.",Hours(4) returns a 4 hour duration
+,,,,,[Intake Time]+Hours(2) returns the time of day from the Intake Time field plus two hours.
+,,,,,"Hours([Test Length in Hours]) converts the numeric value in the Test Length in Hours field into a duration expressed in hours. The number doesn't change, just the data type."
+Type Conversion,HTMLToText,(Text t),Text,Takes HTML text input and returns plain text content.,"HTMLToText(""<b>Foo</b>"") returns ""Foo"""
+Special,If,"(Boolean condition1, <any> result1, ..., <any> else-result)",<same type as result1>,"If condition1 is true, returns result1, otherwise returns else-result. You can include additional condition/result pairs before the final else-result (as in the first example). QuickBase evaluates the conditions in sequence until one is found to be true, and then the corresponding result is returned. The else-result is optional. If omitted, QuickBase assumes it's null (or empty - a blank). All conditions must be of type Boolean (return a true or a false). Results may be of any type, but they must all be the same type.","If([Grade]=""A"", 100, [Grade]=""B"", 90)"
+,,,,,
+,,,,,"This formula says: if the value in the Grade field is A, then return 100. If the value in the Grade field is B, then return 90."
+,,,,,
+,,,,,"IF([Order Complete]=TRUE, [Subtotal] + [Tax], null)"
+,,,,,
+,,,,,"This formula says: If the Order Complete checkbox is on, then add the value in the subtotal field to the value in the tax field and display it. If not, then leave the field empty (or null)."
+,,,,,
+Special,Includes,"(UserList ul, UserList ul1,UserList ul2 ..)",Boolean,"This function takes 2 or more list-user field types as arguments and returns true if the contents of all the the arguments together, except for the first, are included in the contents of first argument; false otherwise.","Includes ([Assigned To] , [Manager], [Employee])"
+,,,,,
+,,,,,This will return true if all the users in the Manager field and Employee field are selected for Assigned To field.
+Numbers,Int,(Number n),Number,"Returns the integer part of Number n. Note that if n is a negative fraction, the result is closer to 0 than n is (compare to function Floor).",Int(3.6) returns 3
+,,,,,Int(3) returns 3
+,,,,,Int(-3.6) returns -3
+Dates,IsLeapDay,(Date d),Boolean,Returns true if d is February 29.,IsLeapDay([Date Due]) returns true if the value in the Date Due field falls on a leap day like 2/29/08.
+Dates,IsLeapYear,(Date d),Boolean,Returns true if the date d falls in a leap year.,"IsLeapYear([Release Date]) returns true if the date in the Release Date field falls in a leap year like 2008. If it occurs in a non leap year, like 2007, the result is false."
+Dates,IsLeapYear,(Number y),Boolean,Returns true if the year y is a leap year.,IsLeapYear(2007) returns false.
+,,,,,IsLeapYear(2008) returns true.
+Null Handling,IsNull,(<any> x),Boolean,"Null means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null. The result of this function is true if x is null, otherwise false. The argument x may be of any data type (except text or boolean).",IsNull([Start Date]) returns true if the field named Start Date is undefined or empty.
+,,,,,IsNull(3.4) returns false
+Special,IsUserEmail,(Text x),Boolean,Returns true if x is the email address of the current user.,"IsUserEmail(""john_smith@example.com"") would return true if John Smith were accessing the table containing the formula field."
+Dates,IsWeekday,(Date d),Boolean,"Returns true if d is a weekday, otherwise false.","IsWeekday([Deliver On]) returns true if the date in the Deliver On field is a weekday. If not, the result is false."
+,,,,,
+,,,,,"IsWeekday(ToDate(""6/20/2003"")) returns true"
+Dates,LastDayOfMonth,(Date d),Date,Returns the last day of the month in which the date falls.,LastDayOfMonth([Service Date]) returns the date of the last day of the month in which the Service Date occurs.
+,,,,,
+,,,,,"LastDayOfMonth(ToDate(""2/12/2008"")) returns "
+,,,,,2/29/2008
+Dates,LastDayOfPeriod,"(Date d, Duration p, Date r)",Date,"Returns the last day of the period in which the date falls. The cycle of periods is defined by the given Duration p, repeated in sequence starting at the given reference date r. If the period p is not a whole number of days, the fractional part is ignored.","LastDayOfPeriod([Payment Date], [Quarter Length in Days], [Fiscal Year Start Date]) returns the last day of the quarter in which the Payment Date falls."
+Dates,LastDayOfWeek,(Date d),Date,Returns the last day (Saturday) of the week in which the date falls.,LastDayOfWeek([Date A]) + Days(1) returns the Sunday date of the week that follows the one in which Date A falls.
+Dates,LastDayOfYear,(Date d),Date,Returns the last day of the year in which the date falls.,LastDayOfYear([Registration Date]) returns the last day of the year in which the Registration Date falls.
+,,,,,
+,,,,,"LastDayOfYear(Todate(""August 4, 2009"")) returns 12-31-2009"
+Text,Left,"(Text t, Number n)",Text,Returns the leftmost n characters from the Text argument t.,"Left(""abcd"", 2) returns ""ab"""
+Text,Left,"(Text t, Text d)",Text,"Returns the left part of a text value up to but not including the first occurrence of a delimiter character. The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters.","Left(""abc/def"","";/,"") returns ""abc"""
+,,,,,"Left(""Michael Smith"", "" "") returns ""Michael"""
+Text,Length,(Text t),Number,Returns the number of characters in t.,"Length(""abc"") returns 3"
+Text,List,"(Text d, Text t1, Text t2, ...)",Text,"Concatenates (strings together) all arguments starting with the second argument, using the first argument as the delimiter between them. If one of the arguments is blank, it and the corresponding delimiter are omitted.","List(""-"", ""a"", ""b"", ""d"") returns ""a-b-d"""
+,,,,,
+,,,,,"List("", "", ""a"", ""b"", """", ""d"") returns ""a, b, d"""
+,,,,,
+,,,,,"List("", "", [Last Name], [First Name]) returns ""Last Name, First Name"" if both fields are not empty, returns ""Last Name"" if [First Name] is empty, and returns ""First Name"" if [Last Name] is empty."
+,,,,,
+,,,,,"List(""\n"", ""Name"", ""Address Line 1"", """", List("", "", ""City"", ""State""), ""Zip"") returns"
+,,,,,"""Name"
+,,,,,Address Line 1
+,,,,,"City, State"
+,,,,,"Zip"""
+Numbers,Ln,(Number n),Number,Returns the natural (base e) logarithm of n.,Exp(Ln(72)) returns 72
+Numbers,Log,(Number n),Number,Returns the base 10 logarithm of n.,Log(100) returns 2
+,,,,,10 ^ Log(72) returns 72
+Text,Lower,(Text t),Text,Returns t converted to lower case.,"Lower(""ABC"") returns ""abc"""
+Aggregation,Max,"(<any> x, <any> y, ...)",<same type as x and y>,"This function can take 2 or more arguments of any data type, as long as they are all the same type. The result is the same data type as the arguments. Null values are ignored. For Numbers, returns the argument that is greatest. For Text, returns the argument that sorts last alphabetically. For Durations, returns the argument that is longest. For Dates returns the argument that is latest. For Date/Time, returns the argument that is latest. For TimeOfDays, returns the argument that is latest. For Booleans returns the argument that is largest, treating false as less than true.","Max (Days(2), Weeks(1)) returns 1 week"
+,,,,,"Max (10, 20, 30, 40) returns 40"
+,,,,,"Max (10, null, 30) returns 30"
+,,,,,"Max (null, null, null) returns null"
+Text,Mid,"(Text t, Number p, Number n)",Text,"Returns n characters from the middle of t, starting at position p. The first character is position 1.","Mid(""abcd"", 2, 3) returns ""bcd"""
+,,,,,"Mid(""abcd"", 4, 4) returns ""d"""
+Aggregation,Min,"(<any> x, <any> y, ...)",<same type as x and y>,"This function can take 2 or more arguments of any data type, as long as they are all the same type. The result is the same data type as the arguments. Null values are ignored. For Numbers, returns the argument that is least. For Text, returns the argument that sorts first alphabetically. For Durations, returns the argument that is shortest. For Dates returns the argument that is earliest. For Date/Time, returns the argument that is earliest. For TimeOfDays, returns the argument that is earliest. For Booleans returns the argument that is smallest, treating false as less than true.","Min (10, 20, 30, 40) returns 10"
+,,,,,"Min ([Date1], [Date2]) returns whichever date field's value is earlier"
+,,,,,"Min (Days(2), Weeks(1)) returns 2 days"
+,,,,,"in (10, null, 30) returns 10"
+,,,,,"Min (null, null, null) returns null"
+TimeOfDay,Minute,(TimeOfDay t),Number,Returns the minute part of the argument t. The minute is in the range 0 to 59.,"Minute(ToTimeOfDay(""3:04pm"")) returns 4"
+Durations,Minutes,(Number n),Duration,"Returns a Duration representing n minutes. This function takes a number and converts it into a Duration type value, expressed in minutes.",minutes(42) returns a duration of 42 minutes.
+,,,,,"Minutes([Test Length in Minutes]) converts the numeric value in the Test Length in Minutes field into a duration expressed in minutes. The number doesn't change, just the data type."
+,,,,,[Start Time] + minutes(90) returns the time of day that 90 minutes after the time of day in the Start Time field.
+Numbers,Mod,"(Number n, Number m)",Number,"Returns n modulo m. Mod implements 'clock' arithmetic; it models movement around a clock that is labeled with the numbers 0 to m-1. To get the result, just count n times around the clock. (Mod is the same as Rem for positive numbers, but different for negative numbers.) You might use this function to auto-assign tasks to staff members. For details, please read this article","Mod(7,3) returns 1"
+,,,,,"Mod(-7,3) returns 2"
+,,,,,"Mod(7,-3) returns -1"
+,,,,,"Mod(-7,-3) returns -2"
+,,,,,
+,,,,,Sample auto-assign formula:
+,,,,,
+,,,,,"If (Mod([Record ID#],ToNumber([number_of_reps])) = 0, ToUser(""jsmith""),"
+,,,,,"Mod([Record ID#],ToNumber([number_of_reps])) = 1, ToUser(""bboop""),"
+,,,,,"Mod([Record ID#],ToNumber([number_of_reps])) = 2, ToUser(""ppeabody""))"
+Durations,Mod,"(Duration n, Duration m)",Duration,"Returns n modulo m. (Mod is the same as Rem for positive numbers, but different for negative numbers.)","Mod(Days(4), Days(3)) =  Days(1)"
+,,,,,"Mod(Days(-4), Days(3)) =  Days(2)"
+,,,,,"Mod(Days(4), Days(-3)) = Days(-1)"
+,,,,,"Mod(Days(-4), Days(-3)) = Days(-2)"
+Dates,Month,(Date d),Number,Returns the month number of the Date d. January is month 1.,Month([Start Date]) returns the number of the month within the date that appears in the Start Date field.
+,,,,,
+,,,,,"Month(ToDate(""Jan 10, 2000"") returns 1"
+TimeOfDay,MSecond,(TimeOfDay t),Number,Returns the millisecond part of the argument t. The millisecond is in the range 0 to 999.,"MSecond(ToTimeOfDay(""3:04:01.344 pm"")) returns 344"
+Durations,MSeconds,(Number n),Duration,"Returns a Duration representing n milliseconds. This function takes a number and converts it into a Duration type value, expressed in milliseconds.",Mseconds(250) returns a duration of 250 seconds.
+,,,,,"Mseconds([Shutter Time]) converts the numeric value in the Shutter Time field into a duration expressed in milliseconds. The number doesn't change, just the data type."
+Dates,NameOfMonth,"(Date d), Text d",Text,Returns the name of the month containing the given date. Optionally enter 'short' in the second parameter to return the abbreviation of the month.,"NameOfMonth(ToDate(""2/20/20"")) returns ""February"""
+,,,,,"NameOfMonth(ToDate(""2/20/20""), short) returns ""Feb"""
+Date/Times,NameOfMonth,(Date/Time dt),Text,"Returns the name of the month containing the given Date/Time.  Note that this is evaluated in the app's local time zone, not GMT.","If today is January 20, 2020, NameOfMonth(Now()) returns ""January"""
+,,,,Optionally enter 'short' in the second parameter to return the abbreviation of the month.,"NameOfMonth(Now(), short) returns ""Jan"""
+Numbers,NameOfMonth,(Number n),Text,Returns the name of the month whose number is n.  Ensure n is a whole number between 1 and 12. Optionally enter 'short' in the second parameter to return the abbreviation of the month.,"NameOfMonth(12) returns ""December"""
+,,,,,"NameOfMonth(12, short) returns ""Dec"""
+Dates,NextDayOfWeek,"(Date d, Number n)",Date,"Returns the first day after the given date d that falls on the weekday n. n is a number from 0 to 6 with Sunday being 0, Monday being 1, Tuesday being 2, and so on.","NextDayOfWeek([Date Submitted], 2) returns the first Tuesday that follows the Date in the Date Submitted field."
+Unary Operators (act on single values),not,Boolean b,Boolean,"Returns the logical negation of b (if b is true, returns false, otherwise returns true).",(not true) returns false
+,,,,,(not not false) returns false
+,,,,,"not isnull([Finish Date]) returns true if the Finish Date field has content--in other words, it's not null, or empty. (Read more about nulls at: https://www.quickbase.com/help/using_formulas_in_quickbase.html#null)"
+Text,NotLeft,"(Text t, Number n)",Text,Returns what remains after excluding the leftmost n characters from the Text argument t.,"NotLeft(""abcde"", 2) returns ""cde"""
+Text,NotLeft,"(Text t, Text d)",Text,"Returns what remains after excluding the left part of a text value up to and including the first occurrence of a delimiter character. The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters. If space is included in the delimiter list it is handled specially. It acts as a delimiter, but contiguous spaces surrounding a delimiter are ignored rather than each acting as a separate delimiter.","NotLeft(""abc/ def/ghi"","" ;/,"") returns ""def/ghi"""
+,,,,,"NotLeft(""Michael    Wissner"", "" "") returns ""Wissner"""
+Text,NotRight,"(Text t, Number n)",Text,Returns what remains after excluding the rightmost n characters from the Text argument t.,"NotRight(""ABCDE"", 2) returns ""ABC"""
+Text,NotRight,"(Text t, Text d)",Text,"Returns what remains after excluding the right part of a text value starting at the last occurrence of a delimiter character. The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters. If space is included in the delimiter list it is handled specially. It acts as a delimiter, but contiguous spaces surrounding a delimiter are ignored rather than each acting as a separate delimiter.","NotRight(""abc/ def"","" ;/,"") returns ""abc"""
+,,,,,"NotRight(""Michael   Wissner"", "" "") returns ""Michael"""
+Date/Times,Now,(),Date/Time,Returns a Date / Time value representing the current moment.,now() - [Date Created] returns the duration between the current moment and the date the record was created.
+Null Handling,Nz,(Number x),Number,"This function returns x if x is not null. If it is null, it returns 0 instead. An undefined or empty field is ""null."" Null values don't work in numeric calculations, which is where the Nz() function comes in handy. When Nz() finds a null, it sees it as a zero. So, if you want to perform calculations on a field that may include a null, use the Nz function.",Nz(4) returns 4
+,,,,,Nz(0) returns 0
+,,,,,Nz(null) returns 0
+,,,,,"Nz([Mon]) + Nz([Tues] + Nz([Wed]) + Nz([Thurs]) + Nz([Fri]) returns the total of all numbers found in these day of the week fields. If a field is empty, Nz() reads it as a zero."
+Null Handling,Nz,(Duration d),Duration,"This function returns d if d is not null. If it is null, it returns a 0-length duration instead. An undefined or empty field is ""null."" Null values don't work in calculations, which is where the Nz() function comes in handy. When Nz() finds a null, it sees it as a zero. So, if you want to perform calculations on a field that may include a null, use the Nz function.",Nz([Actual Duration]) + Nz([Actual Duration 1]) +  Nz([Actual Duration 2]) returns the totals of values in all these duration fields.
+Null Handling,Nz,"(Number x, Number y)",Number,"This function returns x if x is not null. If it is null, it returns the alternate value y instead. Null means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null.","Nz(34, 100) returns 34"
+,,,,,"Nz(null, 100) returns 100"
+,,,,,"Nz([Final Sales Price], [Price Quote]) returns the value in the Final Sales Price field, if it exists. If Final Sales Price is empty (null), then this example returns the value in the Price Quote field."
+Null Handling,Nz,"(Duration x, Duration y)",Duration,"This function returns x if x is not null. If it is null, it returns the alternate value y instead. Null means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null.","Nz([Length of Project], [Estimated Length of Project] returns the value in the Length of Project field, if it exists. If there is no value in the Length of Project field, this formula returns the value in the Estimated Length of Project field."
+Null Handling,Nz,"(Date x, Date y)",Date,"This function returns x if x is not null. If it is null, it returns the alternate value y instead. Null means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null.","Nz([Actual Finish Date], [Estimated Finish Date]) returns the value in the Actual Finish Date field, if it exists. If the Actual Finish Date field is empty, this formula returns the date in the Estimated Finish Date field."
+Null Handling,Nz,"(Date/Time x, Date/Time y)",Date/Time,"This function returns x if x is not null. If it is null, it returns the alternate value y instead. Null means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null.","Nz([Timestamp of Request], [Date Created]) returns the value from the Timestamp of Request field, if it exists. If there is no value in that field, this formula returns the value from the Date Created field instead."
+Null Handling,Nz,"(TimeOfDay x, TimeOfDay y)",TimeOfDay,"This function returns x if x is not null. If it is null, it returns the alternate value y instead. Null means that a field's value is undefined. In other words, no one has entered any data in that particular field. It's empty. Its value is null.","Nz([Finish Time], [Closing Time]) returns the value in the Finish Time field, if it exists. If there is no value in the Finish Time field, this formula returns the value in the Closing Time field."
+Binary Operators (act on multiple values),or,"Boolean a, Boolean b",Boolean,"Returns true if either a or b is true, otherwise returns false.",(true or false) returns true
+Text,PadLeft,"(Text textToPad, Number targetLength, Text paddingText)",Text,"Extends text to a target length by adding padding to the left of the text. If the text is already the target length or longer, then there's no change. Otherwise, the padding text is added as necessary to reach the target length. NOTE: This function pads up to a limit of 50 characters.","PadLeft(""123"", 5, ""0"") returns ""00123"""
+Text,PadRight,"(Text textToPad, Number targetLength, Text paddingText)",Text,"Extends text to a target length by adding padding to the right of the text. If the text is already the target length or longer, then there's no change. Otherwise, the padding text is added as necessary to reach the target length. NOTE: This function pads up to a limit of 50 characters.","PadRight(""123"", 5, ""**"") returns ""123**"""
+Text,Part,"(Text t, Number p, Text d)",Text,"Returns the specified part of a text value. The parts are separated by the occurrence of any delimiter character. The first argument, t, is the value to be searched. The second argument, p, is the position of the part in the argument t. The first part starting on the left is position 1. Negative part numbers can be used to start from the right. The third argument, d, is a text value containing all the possible delimiter characters. If space is included in the delimiter list it is handled specially. It acts as a delimiter, but contiguous spaces surrounding a delimiter are ignored rather than each acting as a separate delimiter.","Part(""hh:mm:ss"",1,"":"") returns ""hh"""
+,,,,,"Part(""hh:mm:ss"",3,"":"") returns ""ss"""
+,,,,,"Part(""hh:mm:ss"",-1,"":"") returns ""ss"""
+,,,,,"Part(""hh:mm"",3,"":"") returns """""
+,,,,,"Part(""abc, def,ghi"",2,"" ,"") returns ""def"""
+,,,,,"Part([Append],2,""["") returns all text from the Append field that lives between the first [ character and the second [ character. This example shows how to extract only the most recent entry from an append field."
+Dates,PrevDayOfWeek,"(Date d, Number n)",Date,"Returns the last day before the given date d that falls on the weekday n. n is a number from 0 to 6 with Sunday being 0, Monday being 1, Tuesday being 2, and so on.","PrevDayOfWeek([Date Due], 5) returns the date of the last Friday that occurse before the Date Due."
+Numbers,PV,"(Number rate, Number nskip, Number amt)",Number,Calculates the Present Value of a future payment. Rate is the discount rate for one time period. Nskip is the number of time periods before the payment occurs. Amt is the amount of the payment.,"PV(.10, 2, 121) returns 100"
+Numbers,PV,"(Number rate, Number nskip, Number amt, Number npay)",Number,"Calculates the Present Value of a series of future payments. Rate is the discount rate for one time period. Nskip is the number of time periods before the first payment occurs. Amt is the amount of each payment. Npay is the number of payments in the series, spaced one time period apart.","PV(.10, 1, 100, 3) returns 248.69"
+Encoding Functions,QB32Decode,(Text t),Number,Decodes text back to an integer using a base32 encoding specific to Quick Base.,"QB32Decode(""bpcwsmnz6"") returns 1549023949564"
+Encoding Functions,QB32Encode,(Number p),Text,Encodes an integer as text using a base32 encoding specific to Quick Base,"QB32Encode(1549023949564) returns ""bpcwsmnz6"""
+Numbers,Rem,"(Number n, Number d)",Number,"Returns a number that is the remainder after n is divided by d an integer number of times. (Mod is the same as Rem for positive numbers, but different for negative numbers.)","Rem(7,3) returns 1"
+,,,,,"Rem(-7,3) returns -1"
+,,,,,"Rem(7,-3) returns 1"
+,,,,,"Rem(-7,-3) returns -1"
+Durations,Rem,"(Duration n, Duration d)",Duration,"Returns a Duration that is the remainder after n is divided by d an integer number of times. (Mod is the same as Rem for positive numbers, but different for negative numbers.)","Rem(Days(4), Days(3)) =  Days(1)"
+,,,,,"Rem(Days(-4), Days(3)) = Days(-1)"
+,,,,,"Rem(Days(4), Days(-3)) =  Days(1)"
+,,,,,"Rem(Days(-4), Days(-3)) = Days(-1)"
+Text,RemoveNewlineCharacters,(Text t),Text,"Finds all instances of newline characters ""\r"" and ""\n"" and replaces them with a space. Consecutive newline characters are treated as one occurrence.","RemoveNewlineCharacters(""Hello\r\n\r\nWorld"") returns ""Hello World"""
+Text,Right,"(Text t, Number n)",Text,Returns the rightmost n characters from the Text argument t.,"Right(""ABCD"", 2) returns ""CD"""
+Text,Right,"(Text t, Text d)",Text,"Returns the right part of a text value starting at the character after the last occurrence of a delimiter character. The first argument, t, is the value to be searched. The second argument, d, is a text value containing all the possible delimiter characters.","Right(""abc/def"","";/,"") returns ""def"""
+,,,,,"Right(""Michael Wissner"", "" "") returns ""Wissner"""
+Rounding and Truncating,Round,(Number x),Number,Returns the nearest integer to the number x. The fraction .5 rounds up to the next greater integer.,Round(3.2) = 3
+,,,,,Round(3.5) = 4
+,,,,,Round(3.7) = 4
+,,,,,Round(-3.4) = -3
+,,,,,Round(-3.5) = -3
+,,,,,Round(-3.7) = -4
+Rounding and Truncating,Round,"(Number x, Number y)",Number,"Returns the multiple of y which is nearest to x. You may notice small discrepancies when you use this function with floating point numbers. For example, Round(37.785,0.01) returns 37.78 instead of 37.79. This is not a QuickBase-specific issue; the discrepancies happen because some floating point numbers cannot be represented exactly in the binary format required by computers and are instead approximated.","Round(3.12345, .01) returns 3.12"
+,,,,,"Round(3.6, 2) returns 4"
+,,,,,"Round(-3.6, 2) returns -4"
+Rounding and Truncating,Round,"(Duration x, Duration y)",Duration,Returns the multiple of the duration y which is nearest the duration x.,"Round(Days(3.5), Days(2)) returns Days(4)"
+Text,SearchAndReplace,"(Text textToSearch, Text searchText, Text replacementText)",Text,Replaces all occurrences of a given search text with the replacement text. Search is case sensitive.,"SearchAndReplace(""John Smith"", ""John"", ""Jane"") returns ""Jane Smith"""
+TimeOfDay,Second,(TimeOfDay t),Number,Returns the second part of the argument t. The second is in the range 0 to 59.,"Second(ToTimeOfDay(""3:04 pm"")) returns 0"
+Durations,Seconds,(Number n),Duration,"Returns a Duration representing n seconds. This function takes a number and converts it into a Duration type value, expressed in seconds.",seconds(120) returns a duration of 120 seconds.
+,,,,,"seconds([100yd Dash Finish Time]) converts the numeric value in the 100yd Dash Finish Time field into a duration expressed in seconds. The number doesn't change, just the data type."
+,,,,,[Start Time] + seconds(10) returns the time of day that's 10 seconds after the time of day in the Start Time field.
+Queries,Size,(List l),Number,"Returns the number of items in a TextList, UserList, or RecordList.",Size([Assigned To]) returns the number of items in the ?Assigned to? field for a given record.
+TextList,Split,(Text textToSplit),Text,"Converts text string, in format of items list with semicolon separator, to list structure. Each item can be processed separately. Empty values and blank values are ignored. Spaces at the beginning and at the end of resulting items are removed.","Example: Split("" item-0 ;;item-1; ;item-2"") returns [""item-0"", ""item-1"", ""item-2""]"
+TextList,Split,"(Text textToSplit, Text delimiter)",Text,"Converts text string, in format of items list with custom separator character, to list structure. Each item can be processed separately. Empty values and blank values are ignored. Spaces at the beginning and at the end of resulting items are removed.","Example: Split("" item-0 ==item-1= =item-2"", ""="") returns [""item-0"", ""item-1"", ""item-2""]"
+Numbers,Sqrt,(Number n),Number,Returns the square root of n.,Sqrt(9) returns 3
+,,,,,Sqrt(16) returns 4
+Aggregation,Sum,"(Number n, ...)",Number,Returns the sum of the non-null arguments.,"Sum(12.50, 0.5, null, 3) returns 16"
+Aggregation,Sum,"(Duration d, ...)",Duration,Returns the sum of the non-null arguments.,"Sum(Days(1), Weeks(2), Days(2)) returns 17 days"
+Queries,SumValues,"(RecordList l, Number f)",Number,Returns the sum of values of fields with id f from record list l. f should be an id of a numeric field.,"SumValues(GetRecords(?{3.GT.0}?), 3) returns sum of all records ids in current table. (Record ID# is the field with id 3 and records ids are greater than 0.)"
+Type Conversion,ToBoolean,(Text x),Boolean,"Converts the values ""1"", ""true"" or ""yes"" to true, other values to false. Case is ignored.","ToBoolean(""Yes"") returns true"
+,,,,,"ToBoolean(""0"") returns false"
+Type Conversion,ToBoolean,(Number n),Boolean,"Returns true if the Number n is a non-zero value, otherwise returns false.",ToBoolean(1) returns true
+,,,,,ToBoolean(0) returns false
+,,,,,ToBoolean(null) returns false
+Type Conversion,ToDate,(Text x),Date,"Converts the text value x into a Date. x can be several of the popular date formats, including ""January 30, 2000"", ""1/30/00"", ""2000/1/30"", ""1-30-2000""","ToDate(""Jan 30, 2000"") takes the text ""Jan 30, 2000"" and returns it as a date type value."
+Type Conversion,ToDate,(Date/Time x),Date,"Date/Time type fields have a date, time and time zone associated with them, while Dates do not have time and time zone. This function converts the Date/Time x into a Date by returning the Date, in the local time zone, in which Date/Time x falls.",ToDate([Date Modified]) returns the Date the record was last modified
+Dates,Today,(),Date,Returns the current date in the local time zone.,Today() - [Estimated Finish Date] calculates the duration since the Estimated Finish Date occurred.
+Durations,ToDays,(Duration d),Number,"Takes a Duration d, and returns the number of days contained in it.",ToDays([Start Date] - Today()) returns the number of days until the Start date.
+,,,,,
+,,,,,ToDays(Weeks(2)) returns 14
+Type Conversion,ToFormattedText,"(Date d, Text f)",Text,Returns a Text value which is the formatted text version of the date specified. The Text argument to the function specifies the format. Choose one of: MMDDYYYY MMDDYY DDMMYYYY DDMMYY YYYYMMDD,"ToFormattedText(Date(2000,01,30),""MMDDYYYY"")  returns ""01-30-2013"" "
+,,,,,"ToFormattedText(Date(2000,01,30),""MMDDYY"")  returns ""01-30-13"" "
+,,,,,"ToFormattedText(Date(2000,01,30),""DDMMYYYY"")  returns ""30-01-2013"" "
+,,,,,"ToFormattedText(Date(2000,01,30),""DDMMYY"")  returns ""30-01-13"" "
+,,,,,"ToFormattedText(Date(2000,01,30),""YYYYMMDD"")  returns ""2013-01-30"""
+Type Conversion,ToFormattedText,"(Date/Time t, Text f)",Text,Returns a Text value which is the formatted text version of the date/time specified. The Text argument to the function specifies the format. Choose one of: MMDDYYYY MMDDYY DDMMYYYY DDMMYY YYYYMMDD,"ToFormattedText([Date Created],""MMDDYYYY"")  returns ""01-30-2013 10:34 PM"" "
+,,,,,"ToFormattedText([Date Created],""MMDDYY"")  returns ""01-30-13 10:34 PM"" "
+,,,,,"ToFormattedText([Date Created],""DDMMYYYY"")  returns ""30-01-2013 10:34 PM"" "
+,,,,,"ToFormattedText([Date Created],""DDMMYY"")  returns ""30-01-13 10:34 PM"" "
+,,,,,"ToFormattedText([Date Created],""YYYYMMDD"")  returns ""2013-01-30 10:34 PM"""
+Type Conversion,ToFormattedText,"(Number n, Text f)",Text,"Returns a Text value which is the formatted text version of the number specified. The Text argument to the function specifies the format. Choose one of: none_dot - returns the number formatted like 12345678.85 comma_dot - returns the number formatted like 12,345,678.85 comma_dot_2 - returns the number formatted like 1,23,45,678.85 none_comma - returns the number formatted like 12345678,85 dot_comma - returns the number formatted like 12.345.678,85 dot_comma_2 - returns the number formatted like 1.23.45.678,85","ToFormattedText(2394729834.85, ""comma_dot"") returns 2,394,729,834.85"
+Type Conversion,ToFormattedText,"(Duration d, Text f)",Text,"Returns a Text value containing the formatted print representation of the Duration d, using the format f. The Text argument to the function specifies the format. Choose one of: HHMM HHMMSS MMSS MM MSECONDS SECONDS MINUTES HOURS DAYS WEEKS SMART","ToFormattedText([Duration],""HHMM"")  returns ""01:12"" "
+,,,,,"ToFormattedText([Duration],""HHMMSS"")  returns ""01:02:03"" "
+,,,,,"ToFormattedText([Duration],""MMSS"")  returns "":02:03"" "
+,,,,,"ToFormattedText([Duration],""MM"")  returns "":02"" "
+,,,,,"ToFormattedText([Duration],""MSECONDS"")  returns ""83750000"" "
+,,,,,"ToFormattedText([Duration],""SECONDS"")  returns ""8375"" "
+,,,,,"ToFormattedText([Duration],""MINUTES"")  returns ""25.55"" "
+,,,,,"ToFormattedText([Duration],""HOURS"")  returns ""25.35"" "
+,,,,,"ToFormattedText([Duration],""DAYS"")  returns ""1.53"" "
+,,,,,"ToFormattedText([Duration],""WEEKS"")  returns ""0.1235"" "
+,,,,,"ToFormattedText([Duration],""SMART"")  returns ""23.434 hours"""
+Type Conversion,ToFormattedText,"(Number n, Text f, Number c)",Text,"Returns a Text value containing the formatted print representation of the number n, using the format f, with separators starting after number c digits.  Valid values for c are 3 or 4; if it is 3, separators will be shown starting after 3 digits instead of after 4.","ToFormattedText(1234.56,""comma_dot"", 3) returns ""4,567.89"""
+,,,,,"ToFormattedText(1234.56,""comma_dot"", 4) returns ""4567.89"""
+,,,,,"ToFormattedText(1234567.89,""comma_dot_2"",3) returns ""12,34,567.89"""
+,,,,,"ToFormattedText(1234.56,""dot_comma"", 3) returns ""4.567,89"""
+,,,,,"ToFormattedText(1234.56,""dot_comma"", 4) returns ""4567,89"""
+,,,,,"ToFormattedText(1234567.89,""dot_comma_2"",3) returns ""12.34.567,89"""
+Durations,ToHours,(Duration d),Number,"Takes a Duration d, and returns the number of hours contained in it.",ToHours(Days(2)) returns 48
+Durations,ToMinutes,(Duration d),Number,"Takes a Duration d, and returns the number of minutes contained in it.",ToMinutes(Hours(2)) returns 120
+Durations,ToMSeconds,(Duration d),Number,"Takes a Duration d, and returns the number of milliseconds contained in it.",ToMSeconds(Seconds(2)) returns 2000
+Type Conversion,ToNumber,(Text x),Number,Returns the number represented by the Text value x.,"ToNumber(""-12.3"") returns -12.3"
+,,,,,"ToNumber("""") returns null"
+Type Conversion,ToNumber,(Boolean b),Number,"Returns 0 if b is false, 1 if b is true.",ToNumber(false) returns 0
+,,,,,ToNumber(true) returns 1
+Durations,ToSeconds,(Duration d),Number,"Takes a Duration d, and returns the number of seconds contained in it.",ToSeconds(Minutes(2)) returns 120
+Type Conversion,ToText,(<any> x),Text,Returns a Text value containing the print representation of the argument x.,"ToText(3.4) returns ""3.4"""
+,,,,,"ToText(null) returns """""
+,,,,,"ToText(true) returns ""1"""
+,,,,,"ToText(Date(2000,12,16)) returns ""12-16-2000"""
+,,,,,"ToText(ToTimeOfDay(""4pm"")) returns ""4:00 pm"""
+,,,,,"ToText(Hours(2)+Minutes(20)) returns ""2:20"""
+,,,,,"ToText([Date Created]) returns ""12-15-2000 10:34 PM"""
+,,,,,
+,,,,,ToText([Record Owner]) returns the user name or email address of the user who appears in the Record Owner field.
+,,,,,
+,,,,,"ToText([AssignedTo]), where AssignedTo is a list-user field type, returns a semi-colon separated list of the user names or email addresses of the users  who appear in the AssignedTo field."
+Type Conversion,ToText,"(Number x, Text t)",Text,Returns a Text value containing the print representation of the argument x. Includes a second argument indicating how many digits to include before truncating or rounding.,"ToText(355/113, ""full"") returns 3.1415929203539825"
+,,,,(Default) Legacy - up to 8 digits,"ToText(355/113, ""legacy"") returns 3.1415929"
+,,,,Full - exposes the most digits possible,
+Type Conversion,ToTimeOfDay,(Text x),TimeOfDay,"Converts the text value x into a TimeOfDay. x can be several of the popular time formats, including ""3 pm"", ""3:04 am"", ""22:00"", ""2:03:29 am"", ""12:03:29.345"".","ToTimeofDay(""16:32"") returns the time 4:32pm"
+Type Conversion,ToTimeOfDay,(Date/Time t),TimeOfDay,Date/Time fields display the date and time. This function returns the TimeOfDay on which the Date/Time t falls in the local time zone.,ToTimeOfDay([Last Modified])
+Type Conversion,ToTimestamp,(Date d),Date/Time,Returns a Date / Time value which is 12:00 am of the given Date d in the local time zone (midnight at the beginning of the Date).,"ToTimestamp(Date(2000,7,4)) returns midnight on July 4, 2000."
+Type Conversion,ToTimestamp,"(Date d, TimeOfDay t)",Date/Time,"Returns a Date / Time value which is at the given TimeOfDay t, on the given Date d in the local time zone","ToTimestamp([Start Date], [Start Time])"
+Special,ToUser,(Text t),User,"Converts a user name, email address, or user ID to a user value. A ""user"" is an individual with whom you've shared your application. You'd translate something like an e-mail address into a user value so that QuickBase recognizes the user. When you do so, you can take advantage of user fields to design permissions and/or views. For example, show a user only those tasks that have been assigned to her.",ToUser([Email Address]) takes the values in the Email Address field and returns their corresponding user values.
+,,,,,"ToUser(""jsmith"") returns the user with the user name ""jsmith"". "
+,,,,,"ToUser(""jsmith@example.com"") returns the user possessing that e-mail address.  "
+,,,,,ToUser(123456.abcd) returns the user with that user ID.
+Special,ToUserList,(User u ..),UserList,Concatenates the contents of one or more user type fields into a user list field type.,"ToUserList([Sales Manager], [Business Manager]) takes the values in the Sales Manager field and Business Manager field and returns the combined value into another field."
+,,,,,
+,,,,This field is of type List-User and has a limit of 20 entries. If the resulting value of this field in a record exceeds the maximum entries allowed the resulting value will be set to blank.,The ToUserList() formula can take Either all User fields or all UserList fields as arguments; not both. To combine a User field and a UserList field then you need convert the User field to a UserList field.
+,,,,,"ToUserList([UserList field], ToUserList([User field]))"
+,,,,,
+,,,,,Associate Error:
+,,,,,Expecting user but found userlist
+Special,ToUserList,(UserList ul ..),UserList,Concatenates the contents of one or more user type fields into a user list field type.,"ToUserList([Sales Managers], [Business Managers]) takes the values in the Sales Manager field and Business Manager field and returns the combined value into another field."
+,,,,,
+,,,,This field is of type List-User and has a limit of 20 entries. If the resulting value of this field in a record exceeds the maximum entries allowed the resulting value will be set to blank.,The ToUserList() formula can take Either all User fields or all UserList fields as arguments; not both. To combine a User field and a UserList field then you need convert the User field to a UserList field.
+,,,,,"ToUserList([UserList field], ToUserList([User field]))"
+,,,,,
+,,,,,Associate Error:
+,,,,,Expecting user but found userlist
+Dates,ToWeekdayN,(Date d),Date,"If the given date d is a weekday returns it, otherwise returns the next occurring weekday.","To WeekdayN([Order Date]) returns the date in the Order Date field if it's a weekday. If not, it returns the date of the next weekday."
+,,,,,
+,,,,,"ToWeekdayN(ToDate(""6/21/2003"")) returns 6/23/2003"
+Dates,ToWeekdayP,(Date d),Date,"If the given date d is a weekday returns it, otherwise returns the previously occurring weekday.","ToWeekdayP(ToDate(""6/21/2003"")) returns 6/20/2003"
+Durations,ToWeeks,(Duration d),Number,"Takes a Duration d, and returns the number of weeks contained in it.",ToWeeks(Days(14)) returns 2
+Type Conversion,ToWorkDate,(Date d),WorkDate,Converts a date d to a WorkDate.,ToWorkDate([Finish]) takes a date value from the Finish field and returns it as a Workdate.
+,,,,,
+,,,,,"ToWorkDate(ToDate(""10/31/2003"")) returns a work date whose value is 10/31/2003"
+Text,Trim,(Text t),Text,"Returns t with leading and trailing white space characters removed. White space characters are space, tab, CR and LF.","Trim(""  ABC "") returns ""ABC"""
+Text,Upper,(Text t),Text,Returns t converted to upper case.,"Upper(""abc"") returns ""ABC"""
+Text,URLEncode,(Text t),Text,"Encodes the text t so that it can be used in a URL, by substituting special character combinations for certain reserved characters, like '&' and '=' and space.","URLEncode(""abc def&ghi=4"") returns ""abc+def%26ghi%3D4"""
+Special,URLRoot,(),Text,"Returns the first part of the URL used to access QuickBase, including the protocol and the site name.","URLRoot() returns ""https://www.quickbase.com/"""
+Special,User,(),User,Returns the user currently accessing the database.,With this function you can create a view that selects only the records modified by the user who is currently viewing the database.
+Special,UserListToEmails,(UserList ul),text,Returns a semi-colon separated list of email addresses for all the users selected on the User List field. This function won't work for users who have hidden their e-mail address by choosing a screen name.,UserListToEmails([Assigned To]) returns the semi-colon separated list of email addresses of the QuickBase users who are part of Assigned To field for a record.
+Special,UserListToIDs,(UserList ul),Text,Returns a semi-colon separated list of users' hashed IDs.,"UserListToIDs([Volunteers]), returns ""1234.abcd; 1000.dac3"" where the Volunteers are the users Michael Smith and Nancy Jones."
+Special,UserListToNames,"(UserList ul, Text format)",text,"Returns a semi-colon separated list of users' full names. Specify text format by including ""FF"" to return the full names with the first name first. Or, include ""LF"" to return the full names with the last name first.","UserListToNames([Volunteers], ""LF""), returns ""Smith, Michael; Jones, Nancy"" where the Volunteers are the users Michael Smith and Nancy Jones."
+Special,UserListToNames,(UserList ul),text,"Returns a semi-colon separated list of the users' full names, first name first.",UserListToNames([Volunteers]) returns the full names of the users listed in the Volunteers field.
+Special,UserRoles,"(""ID/Name/Empty"")",Multi-select Text,Returns information about the current user’s role. Use in a Formula Multi-select Text field.,"UserRoles(""ID"") returns the role ID. UserRoles(""Name"") returns the role name. UserRoles(""""), or empty, returns the role ID and name in the format ID/name. "
+,,,,,
+,,,,,"Usage examples, based on the user role, include showing or hiding form elements, validating data, sending a webhook or email notification, or dynamic instructional text."
+,,,,,
+,,,,,
+Special,UserToEmail,(User x),Text,Returns the user's e-mail address. This function won't work for users who have hidden their e-mail address.,UserToEmail([Last Modified By]) returns the email address of the QuickBase user who last modified a record.
+Special,UserToID,(User x),Text,Returns a given user's hashed ID.,"UserToID([Record Owner]), returns ""1234.abcd"" where the record owner is the user Michael Smith."
+Special,UserToName,"(User x, Text format)",Text,"Returns a given user's full name. Specify text format by including ""FF"" to return the full name with the first name first. Or, include ""LF"" to return the full name with the last name first.","UserToName([Record Owner], ""LF""), returns ""Smith, Michael"" where the record owner is the user Michael Smith."
+Special,UserToName,(User x),Text,"Returns the user's full name, first name first.",UserToName([Record Owner]) returns the full name of the user listed in the Record Owner field. 
+,,,,,
+,,,,Use this function to turn a user name into a full name. For example: ,
+,,,,,
+,,,,"UserToName(ToUser(""bboop"")) might return ""Betty Boop"". ",
+Dates,WeekdayAdd,"(Date d, Number n)",Date,Returns the date that is n weekdays past the given date d. n may be negative to move backward in time.,"WeekdayAdd([Start], [Duration]) returns the date that results if you add the value in the Duration field to the date in the Start field and count only weekdays. "
+,,,,,
+,,,,,"WeekdayAdd(ToDate(""6/20/2003""), 2) returns 6/24/2003"
+,,,,,
+,,,,,"WeekdayAdd(ToDate(""6/24/2003""), -2) returns 6/20/2003"
+,,,,,
+,,,,,"If you have a date field named ""Start Date"" and that field has a value of 6/23/2003, then WeekdayAdd([Start Date], -2) returns 6/20/2003"
+WorkDates,WeekdayAdd,"(WorkDate d, Number n)",WorkDate,"Returns the date obtained by adding n weekdays to the date d. The calculation includes the date d as one of the n days. For example, adding 2 days to 10/31/2003 which is a Friday will give you 11/03/2003 since it counts 10/31/2003 as 1 day and 11/03/2003 (a Monday) as the second day.","WeekdayAdd([Start],5) returns the date 5 weekdays after the date in the Start field."
+,,,,,
+,,,,,"WeekdayAdd(ToWorkDate(ToDate(""10/31/2003"")), 2) returns 11/03/2003"
+,,,,,
+,,,,,"WeekdayAdd([Field A], [Field B]) where Field A is a field of type WorkDate and Field B is a field of type Numeric. Assuming that the value of Field A is 10/31/2003 and the value of Field B is 2, the formula will return 11/03/2003"
+Dates,WeekdaySub,"(Date d2, Date d1)",Number,"Returns the number of weekdays in the interval starting with d1 and ending on the day before d2 (same as subtracting Dates, but the result is the number of weekdays instead of a Duration). It is the inverse of WeekdayAdd.","WeekdaySub([Finish], [Start]) returns the number of weekdays between the dates in the Start and Finish fields."
+,,,,,
+,,,,,"WeekdaySub(ToDate(""6/24/2003""), ToDate(""6/20/2003"") ) returns 2"
+,,,,,
+Dates,WeekOfYear,(Date d),Number,Returns the number of weeks by which the given date d follows the first week of the year based on ISO standards. First day of week is a Monday. First week contains the first Thursday of January.,"WeekOfYear(ToDate(""Aug 20, 2000"")) returns 33"
+,,,,,"WeekOfYear(ToDate(""Aug 20, 2000""), 1) returns 35"
+Durations,Weeks,(Number n),Duration,"Returns a Duration representing n weeks. This function takes a number and converts it into a Duration type value, expressed in weeks.",Weeks(2) returns a 2 week duration
+,,,,,"Weeks([Weeks until Delivery]) converts the numeric value in the Weeks until Delivery field into a duration expressed in weeks. The number doesn't change, just the data type."
+WorkDates,WorkdayAdd,"(WorkDate d, Numeric n)",WorkDate,"Returns the date obtained by adding n days to the date d. The calculation includes the date d as one of the n days. For example, adding 2 days to 10/31/2003 which is a Friday will give you 11/01/2003 since it counts 10/31/2003 as 1 day and 11/01/2003 (a Saturday) as the second day.","WorkdayAdd([Order Date],7) returns the date seven days after the value in the Order Date field."
+,,,,,
+,,,,,"WorkdayAdd(ToWorkDate(ToDate(""10/31/2003"")), 1) returns 10/31/2003 while WorkdayAdd(ToWorkDate(ToDate(""10/31/2003"")), 2) returns 11/01/2003"
+Dates,Year,(Date d),Number,Returns the year number of the Date d.,Year([Start Date]) returns the year of the date that appears in the Start Date field.
+,,,,,"Year(ToDate(""Jan 10, 2000"")) returns 2000"

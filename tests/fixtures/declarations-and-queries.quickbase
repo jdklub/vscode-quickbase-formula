@@ -1,0 +1,2 @@
+var Text queryCERS = "{'6'.EX.'1'}OR{'7'.GT.'5'}";
+var Text queryByOwner = "{'8'.EX.'{{ownerId}}'}";

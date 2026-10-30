@@ -1,0 +1,10 @@
+.vscode/**
+tests/**
+docs/**
+artifacts/**
+reference/*.csv
+reference/*.quickbase
+images/*.pxm
+images/screenshot.png
+vsc-extension-quickstart.md
+**/*.vsix

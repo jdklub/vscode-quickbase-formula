@@ -5,8 +5,11 @@
     // symbols used as brackets
     "brackets": [
         ["(", ")"],
-        ["{", "}"],
-        ["[", "]"]
+        ["{", "}"]
+    ],
+    "colorizedBracketPairs": [
+        ["(", ")"],
+        ["{", "}"]
     ],
     // symbols that are auto closed when typing
     "autoClosingPairs": [

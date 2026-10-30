@@ -1,0 +1,3 @@
+var TextList recs = Split("A;B", ";");
+Join($recs, "; ")
+var Text todayquery = "{'13'.EX.'today'}";

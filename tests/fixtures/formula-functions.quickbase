@@ -1,0 +1,5 @@
+// Retrieve open project owners
+var RecordList openProjects = GetRecords("{'6'.EX.'In Progress'}", [_DBID_PROJECTS]);
+var TextList owners = GetFieldValues($openProjects, 8);
+
+Join($owners, "; ")

@@ -1,0 +1,14 @@
+var text address = "123 Main Street"
+var number areaCode = 216
+
+var text dbUrl = URLRoot() & "db/" & [_DBID_MY_TABLE]
+var text query = "?addr=" & $address
+
+var invalid = If(ToDate([End Date]) <= ([Start Date] + Days(30)), 1, 0)
+
+If(invalid and [Override], "Ok!", "Problem :(")
+
+
+
+
+

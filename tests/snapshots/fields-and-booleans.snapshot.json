@@ -1,0 +1,75 @@
+{
+    "line":  1,
+    "text":  "var Bool isActive = [Status] = \"Active\" and not IsNull([Assigned To]);",
+    "topLevel":  [
+                     {
+                         "start":  0,
+                         "end":  3,
+                         "text":  "var",
+                         "scope":  "keyword.control.declaration.quickbase"
+                     },
+                     {
+                         "start":  4,
+                         "end":  8,
+                         "text":  "Bool",
+                         "scope":  "entity.name.type.quickbase"
+                     },
+                     {
+                         "start":  9,
+                         "end":  17,
+                         "text":  "isActive",
+                         "scope":  "variable.other.quickbase"
+                     },
+                     {
+                         "start":  18,
+                         "end":  19,
+                         "text":  "=",
+                         "scope":  "keyword.operator.quickbase"
+                     },
+                     {
+                         "start":  20,
+                         "end":  28,
+                         "text":  "[Status]",
+                         "scope":  "variable.other.quickbase"
+                     },
+                     {
+                         "start":  29,
+                         "end":  30,
+                         "text":  "=",
+                         "scope":  "keyword.operator.quickbase"
+                     },
+                     {
+                         "start":  31,
+                         "end":  39,
+                         "text":  "\"Active\"",
+                         "scope":  "string.quoted.double.quickbase"
+                     },
+                     {
+                         "start":  40,
+                         "end":  43,
+                         "text":  "and",
+                         "scope":  "keyword.control.quickbase"
+                     },
+                     {
+                         "start":  44,
+                         "end":  47,
+                         "text":  "not",
+                         "scope":  "keyword.control.quickbase"
+                     },
+                     {
+                         "start":  48,
+                         "end":  54,
+                         "text":  "IsNull",
+                         "scope":  "support.function.quickbase"
+                     },
+                     {
+                         "start":  55,
+                         "end":  68,
+                         "text":  "[Assigned To]",
+                         "scope":  "variable.other.quickbase"
+                     }
+                 ],
+    "queries":  [
+
+                ]
+}
